@@ -11,6 +11,7 @@ Esta API foi projetada para ser simples e eficiente, permitindo consultas rápid
 - Etnias </br>
 - Distritos </br>
 - Comunas </br>
+- E outras informações.
 
 
 ### 📄 **Documentação Oficial**  
