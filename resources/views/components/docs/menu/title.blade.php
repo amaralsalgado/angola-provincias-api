@@ -1,0 +1,1 @@
+<h2 class="mt-3 font-medium dark:text-zinc-200 text-neutral-900 text-[15px]">{{$name}}</h2>

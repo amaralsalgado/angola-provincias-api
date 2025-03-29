@@ -1,0 +1,46 @@
+@import url(mdi/css/materialdesignicons.min.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../fontes/Poppins/Poppins-Bold.ttf');
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../fontes/Poppins/Poppins-ExtraBold.ttf');
+        font-weight: 800;
+    }
+    
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../fontes/Poppins/Poppins-SemiBold.ttf');
+        font-weight: 600;
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../fontes/Poppins/Poppins-Medium.ttf');
+        font-weight: 500;
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../fontes/Poppins/Poppins-Thin.ttf');
+        font-weight: 100;
+    }
+    
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../fontes/Poppins/Poppins-Regular.ttf');
+        font-weight: 400;
+    }
+
+    *{
+        font-family: 'Poppins';
+    }
+}

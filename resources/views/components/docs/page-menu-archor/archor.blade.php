@@ -1,0 +1,2 @@
+<a href="#{{ $archor }}" class="before:content-['#'] before:text-lg before:text-yellow-300 before:-ml-6 before:font-medium before:absolute before:-top-1 relative block text-base font-medium text-[15px] dark:text-zinc-200 text-neutral-900 {{$class ?? null}}">{{$name}}</a>
+{{ $slot }}
