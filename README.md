@@ -8,9 +8,9 @@ Esta API foi projetada para ser simples e eficiente, permitindo consultas rápid
 - Capital </br>
 - Municípios pertencentes </br>
 - Línguas faladas </br>
-- Etnias faladas </br>
-- Distritos faladas </br>
-- Comunas faladas </br>
+- Etnias </br>
+- Distritos </br>
+- Comunas </br>
 
 
 ### 📄 **Documentação Oficial**  
