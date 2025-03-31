@@ -10,7 +10,7 @@ class Provincia extends Model
     use HasFactory;
 
     protected $table = 'provincias';
-    protected $fillable = ['nome', 'extensao', 'data_fundacao', 'capital_id'];
+    protected $fillable = ['nome', 'slug', 'extensao', 'data_fundacao', 'capital_id'];
     protected $hidden = ['id', 'capital_id', 'created_at', 'updated_at', 'pivot'];
 
     protected function casts(): array

@@ -10,8 +10,8 @@ class Capital extends Model
 {
     use HasFactory;
     protected $table = 'capitais';
-    protected $fillable = ['nome','provincia_id'];
-    protected $hidden = ['id','created_at','updated_at'];
+    protected $fillable = ['nome', 'slug'];
+    protected $hidden = ['id', 'created_at', 'updated_at'];
 
     public function provincia(){
         return $this->hasOne(Provincia::class);

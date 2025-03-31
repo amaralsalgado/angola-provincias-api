@@ -13,8 +13,8 @@ class Municipio extends Model
     use HasFactory;
 
     protected $table = 'municipios';
-    protected $fillable = ['nome','provincia_id'] ;
-    protected $hidden = ['id','provincia_id','created_at','updated_at'];
+    protected $fillable = ['nome', 'slug', 'provincia_id'];
+    protected $hidden = ['id', 'provincia_id', 'created_at', 'updated_at'];
 
     public function provincia(){
         return $this->belongsTo(Provincia::class);
