@@ -12,7 +12,7 @@ class Etnia extends Model
 
     protected $table = 'etnias';
 
-    protected $fillable = ['nome'];
+    protected $fillable = ['nome', 'slug'];
 
     protected $hidden = ['id','created_at','updated_at','pivot'];
 

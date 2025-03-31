@@ -11,7 +11,7 @@ class Lingua extends Model
     use HasFactory;
 
     protected $table = 'linguas';
-    protected $fillable = ['nome'] ;
+    protected $fillable = ['nome', 'slug'];
     protected $hidden = ['pivot','id','created_at','updated_at'];
 
 

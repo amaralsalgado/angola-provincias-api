@@ -83,33 +83,81 @@ https://angolaprovinciasapi.ggwp.com.br/api/v1
 Para mais informações consulte a documentação oficial em:
 🔗 [https://angolaprovinciasapi.ggwp.com.br](https://angolaprovinciasapi.ggwp.com.br)
 
-## 🤝 Como Contribuir
+## 🛠️ Configuração do Ambiente
 
 1. **Faça um Fork** do projeto no GitHub.
 2. **Clone o repositório** para sua máquina local:
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repo.git
-   ```
-3. **Entre na branch `develop` e atualize**:
+
+    ```bash
+    git clone https://github.com/seu-usuario/nome-do-repo.git
+    cd angola-provincias-api
+    ```
+
+3. **Instale as dependências**
+
+    ```bash
+    npm install
+    # ou
+    yarn install
+    ```
+
+4. **Configure as variáveis de ambiente**
+
+    ```bash
+    composer update
+    cp .env.example .env
+    php artisan key:generate
+    ```
+
+5. **Execute as migrations juntamente com os seeders**
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6. **Compile o projeto**
+
+    ```bash
+    npm run build
+    ```
+
+7. **Inicie o servidor de desenvolvimento**
+    ```bash
+    php artisan serve
+    ```
+
+## 🧪 Testes
+
+Para executar os testes do projeto, utilize os seguintes comandos:
+
+```bash
+php artisan test
+# ou
+php artisan test --filter=NomeDoTeste
+```
+
+## 🤝 Como Contribuir
+
+1. **Entre na branch `develop` e atualize**:
    ```bash
    git checkout develop  
    git pull origin develop  
    ```
-4. **Crie uma nova branch** a partir de `develop`:
+2. **Crie uma nova branch** a partir de `develop`:
    ```bash
    git checkout -b feature/nome-da-feature
    ```
-5. **Faça as alterações necessárias** no código.
-6. **Commit suas mudanças** com uma mensagem descritiva:
+3. **Faça as alterações necessárias** no código.
+4. **Commit suas mudanças** com uma mensagem descritiva:
    ```bash
    git commit -m "Adiciona nova funcionalidade X"
    ```
-7. **Envie para o repositório remoto**:
+5. **Envie para o repositório remoto**:
    ```bash
    git push origin feature/nome-da-feature
    ```
-8. **Crie um Pull Request (PR) para `develop` no GitHub**.
-9. Aguarde a revisão e faça ajustes, se necessário.
+6. **Crie um Pull Request (PR) para `develop` no GitHub**.
+7. Aguarde a revisão e faça ajustes, se necessário.
 
 ⚠️ **Importante:** Sempre baseie suas alterações na branch `develop`, e não em `main`. 🚀
 
