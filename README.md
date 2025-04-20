@@ -115,16 +115,12 @@ Para mais informações consulte a documentação oficial em:
     php artisan migrate --seed
     ```
 
-6. **Compile o projeto**
-
-    ```bash
-    npm run build
-    ```
-
-7. **Inicie o servidor de desenvolvimento**
-    ```bash
-    php artisan serve
-    ```
+6. **Inicie os servidores de desenvolvimento**
+  ```bash
+   php artisan serve
+   # e em seguida:
+   npm run dev
+  ```
 
 ## 🧪 Testes
 
