@@ -11,7 +11,7 @@ class Comuna extends Model
     use HasFactory;
 
     protected $table = 'comunas';
-    protected $fillable = ['nome','municipio_id'];
+    protected $fillable = ['nome', 'slug', 'municipio_id'];
     protected $hidden = ['id','municipio_id','created_at','updated_at'];
 
     public function municipio(){
