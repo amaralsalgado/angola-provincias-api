@@ -43,7 +43,7 @@ class ProvinciasController extends Controller
             )->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             return $this->successResponse($provincia->toArray());
@@ -60,7 +60,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->with(['etnias'])->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             return $this->successResponse($provincia->etnias->toArray());
@@ -78,7 +78,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             $etnia = Etnia::where('slug', $request->etnia)->first();
@@ -106,7 +106,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->with(['linguas'])->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             return $this->successResponse($provincia->linguas->toArray());
@@ -124,7 +124,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             $lingua = Lingua::where('slug', $request->lingua)->first();
@@ -151,7 +151,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->with(['municipios'])->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             return $this->successResponse($provincia->municipios->toArray());
@@ -168,7 +168,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             $municipio = Municipio::where('slug', $request->municipio)->where('provincia_id', $provincia->id)->first();
@@ -193,7 +193,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->with(['capital'])->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             return $this->successResponse($provincia->capital->toArray());
@@ -210,7 +210,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             $municipio = Municipio::with('comunas')->where('slug', $request->municipio)->where('provincia_id', $provincia->id)->first();
@@ -234,7 +234,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             $municipio = Municipio::where('slug', $request->municipio)->where('provincia_id', $provincia->id)->first();
@@ -263,7 +263,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             $municipio = Municipio::with('distritos')->where('slug', $request->municipio)->where('provincia_id', $provincia->id)->first();
@@ -286,7 +286,7 @@ class ProvinciasController extends Controller
             $provincia = Provincia::where('slug', $request->provincia)->first();
 
             if (!$provincia) {
-                return $this->errorResponse('Provincia não encontrada', 404);
+                return $this->errorResponse('Província não encontrada', 404);
             }
 
             $municipio = Municipio::where('slug', $request->municipio)->where('provincia_id', $provincia->id)->first();

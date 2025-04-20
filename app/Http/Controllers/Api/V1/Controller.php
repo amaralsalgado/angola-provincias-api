@@ -15,7 +15,7 @@ abstract class Controller
      * @param int|null $code
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function successResponse(array $data, ?string $message = 'Sucesso', ?int $code = 200): JsonResponse
+    protected function successResponse(array $data, string $message = 'Sucesso', int $code = 200): JsonResponse
     {
 
         return Response()->json([
@@ -32,7 +32,7 @@ abstract class Controller
      * @param int|null $code
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function errorResponse(string $message, ?int $code = 500): JsonResponse
+    protected function errorResponse(string $message = 'Recurso não encontrado', int $code = 500): JsonResponse
     {
 
         return Response()->json([
