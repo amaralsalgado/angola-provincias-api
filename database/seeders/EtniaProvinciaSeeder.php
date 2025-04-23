@@ -106,13 +106,13 @@ class EtniaProvinciaSeeder extends Seeder
             ]
         ];
 
-        foreach ($data as $data) {
+        foreach ($data as $provincia) {
 
-            foreach ($data['etnias'] as $etniaId) {
+            foreach ($provincia['etnias'] as $etniaId) {
                 Etnia_Provincia::create(
                     [
                     'etnia_id' => $etniaId,
-                    'provincia_id' => $data['provincia_id'],
+                    'provincia_id' => $provincia['provincia_id'],
                     ]
                 );
             }
