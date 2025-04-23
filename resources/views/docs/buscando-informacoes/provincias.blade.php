@@ -196,9 +196,9 @@
 
         <x-docs.section.sub-section title="Buscando informações específicas" id="buscando-informacoes-especificas">
             <x-docs.section.paragraph>
-                A API permite que você acesse uma variedade de informações sobre qualquer província de forma detalhada, utilizando endpoints específicos. Para consultar dados como a <strong>capital</strong>, <strong>municípios</strong>, <strong>comunas</strong>, <strong>distritos</strong>, <strong>línguas</strong> e <strong>etnias</strong> de uma província, você deve utilizar o slug da província na URL correspondente. O slug identifica unicamente cada província e pode ser obtido nas respostas das requisições à api.v1.
+                A API permite que você acesse uma variedade de informações sobre qualquer província de forma detalhada, utilizando endpoints específicos. Para consultar dados como a <strong>capital</strong>, <strong>municípios</strong>, <strong>comunas</strong>, <strong>distritos</strong>, <strong>línguas</strong> e <strong>etnias</strong> de uma província, você deve utilizar o slug da província na URL correspondente. O slug identifica unicamente cada província e pode ser obtido nas respostas das requisições à api.
 
-                A seguir, explicamos como você pode consultar cada uma dessas informações de uma província utilizando a api.v1.
+                A seguir, explicamos como você pode consultar cada uma dessas informações de uma província utilizando a api.
             </x-docs.section.paragraph>
 
         </x-docs.section.sub-section>
