@@ -16,7 +16,7 @@ class ComunaSeeder extends Seeder
     {
 
 
-        $dados = [
+        $municipios = [
             [
                 'nome' => 'Ambriz',
                 'slug' => 'ambriz',
@@ -1754,13 +1754,13 @@ class ComunaSeeder extends Seeder
             ]
         ];
 
-        foreach ($dados as $comuna) {
-           $municipio = Municipio::select('id')->where('slug',$comuna['slug'])->limit(1)->first();
+        foreach ($municipios as $mun) {
+           $municipio = Municipio::select('id')->where('slug',$mun['slug'])->limit(1)->first();
             if (isset($municipio['id'])) {
-                foreach ($comuna['comunas'] as $com) {
+                foreach ($mun['comunas'] as $comuna) {
                     Comuna::create([
-                        'nome' => $com['nome'],
-                        'slug' => $com['slug'],
+                        'nome' => $comuna['nome'],
+                        'slug' => $comuna['slug'],
                         'municipio_id' => $municipio['id']
                     ]);
                 }

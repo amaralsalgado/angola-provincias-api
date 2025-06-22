@@ -17,7 +17,7 @@ class DistritoSeeder extends Seeder
         {
 
 
-            $dados = [
+            $municipios = [
                 [
                     'nome' => 'Ambriz',
                     'slug' => 'ambriz',
@@ -1751,14 +1751,14 @@ class DistritoSeeder extends Seeder
                 ]
             ];
 
-            foreach ($dados as $distrito) {
-               $municipio = Municipio::select('id')->where('slug',$distrito['slug'])->limit(1)->first();
+            foreach ($municipios as $mun) {
+               $municipio = Municipio::select('id')->where('slug',$mun['slug'])->limit(1)->first();
                 if (isset($municipio['id'])) {
 
-                     foreach ($distrito['distritos'] as $des) {
+                     foreach ($mun['distritos'] as $distrito) {
                             Distrito::create([
-                                'nome' => $des['nome'],
-                                'slug' => $des['slug'],
+                                'nome' => $distrito['nome'],
+                                'slug' => $distrito['slug'],
                                 'municipio_id' => $municipio['id']
                             ]);
                         }

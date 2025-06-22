@@ -13,7 +13,7 @@ class LinguaProvinciaSeeder extends Seeder
      */
     public function run(): void
     {
-        $data = [
+        $provincias = [
             [
                 'provincia' => 'Bengo',
                 'provincia_id' => 1,
@@ -106,13 +106,13 @@ class LinguaProvinciaSeeder extends Seeder
             ]
         ];
 
-        foreach ($data as $provincia) {
+        foreach ($provincias as $prov) {
 
-            foreach ($provincia['linguas'] as $linguaId) {
+            foreach ($prov['linguas'] as $linguaId) {
                 Lingua_Provincia::create(
                     [
                     'lingua_id' => $linguaId,
-                    'provincia_id' => $provincia['provincia_id'],
+                    'provincia_id' => $prov['provincia_id'],
                     ]
                 );
             }

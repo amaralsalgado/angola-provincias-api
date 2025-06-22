@@ -1,0 +1,48 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: angola_provinces_api
+        volumes:
+            - .:/var/www
+        ports:
+            - "5173:5173" # Vite
+        depends_on:
+            - db
+            - nginx
+
+    db:
+        image: mariadb
+        container_name: mariadb_db
+        restart: always
+        environment:
+            MARIADB_DATABASE: angola_provinces_api
+            MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
+        ports:
+            - "3306:3306"
+        volumes:
+            - db_data:/var/lib/mysql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        restart: always
+        ports:
+            - "8080:80"
+        environment:
+            PMA_HOST: db
+            PMA_PORT: 3306
+
+    nginx:
+        image: nginx:latest
+        container_name: nginx
+        restart: always
+        volumes:
+            - .:/var/www
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
+        ports:
+            - "8000:8000"
+
+volumes:
+    db_data:

@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('slug',255)->nullable(false);
             $table->string('extensao',30)->nullable(false);
             $table->date('data_fundacao')->nullable(false);
-            $table->foreignIdFor(Capital::class)->references('id')->on('capitais');
             $table->timestamps();
         });
     }

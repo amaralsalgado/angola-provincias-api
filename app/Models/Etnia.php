@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Provincia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Etnia extends Model
 {
@@ -16,7 +17,7 @@ class Etnia extends Model
 
     protected $hidden = ['id','created_at','updated_at','pivot'];
 
-    public function provincias(){
+    public function provincias(): BelongsToMany{
         return $this->belongsToMany(Provincia::class);
     }
 }

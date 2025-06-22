@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Provincia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Lingua extends Model
 {
@@ -15,7 +16,7 @@ class Lingua extends Model
     protected $hidden = ['pivot','id','created_at','updated_at'];
 
 
-    public function provincias(){
+    public function provincias(): BelongsToMany{
         return $this->belongsToMany(Provincia::class);
     }
 }

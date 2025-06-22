@@ -14,8 +14,8 @@ return new class extends Migration
     {
         Schema::create('capitais', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',255)->nullable(false);
-            $table->string('slug',255)->nullable(false);
+            $table->foreignIdFor(Provincia::class)->references('id')->on('provincias')->cascadeOnDelete();
+            $table->morphs('capitalable');
             $table->timestamps();
         });
     }

@@ -24,17 +24,17 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call([
-            CapitalSeeder::class,
             ProvinciaSeeder::class,
             MunicipioSeeder::class,
             ComunaSeeder::class,
             DistritoSeeder::class,
+            CapitalSeeder::class,
             LinguaSeeder::class,
             EtniaSeeder::class,
             EtniaProvinciaSeeder::class,
             LinguaProvinciaSeeder::class,
         ]);
-        
+
         // User::factory(10)->create();
 
         User::factory()->create([

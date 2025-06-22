@@ -21,9 +21,11 @@ class ProvinciasController extends Controller
 
         try {
 
-            $provincias = Provincia::with(
-                relations: ['capital', 'municipios.distritos', 'municipios.comunas', 'etnias', 'linguas']
-            )->get();
+            $provincias = Provincia::with(['capital.capitalable', 'municipios.distritos', 'municipios.comunas', 'etnias', 'linguas'])->get();
+
+            $provincias->each(function (Provincia $provincia) {
+                $provincia->setRelation('capital', $provincia->capital->capitalable);
+            });
 
             return $this->successResponse($provincias->toArray());
         } catch (\Throwable $th) {
@@ -39,12 +41,14 @@ class ProvinciasController extends Controller
         try {
 
             $provincia = Provincia::where('slug', $request->provincia)->with(
-                ['capital', 'municipios.distritos', 'municipios.comunas', 'etnias', 'linguas']
+                ['capital.capitalable', 'municipios.distritos', 'municipios.comunas', 'etnias', 'linguas']
             )->first();
 
             if (!$provincia) {
                 return $this->errorResponse('Província não encontrada', 404);
             }
+
+            $provincia->setRelation('capital', $provincia->capital->capitalable);
 
             return $this->successResponse($provincia->toArray());
         } catch (\Throwable $th) {
@@ -190,11 +194,13 @@ class ProvinciasController extends Controller
 
         try {
 
-            $provincia = Provincia::where('slug', $request->provincia)->with(['capital'])->first();
+            $provincia = Provincia::where('slug', $request->provincia)->with(['capital.capitalable'])->first();
 
             if (!$provincia) {
                 return $this->errorResponse('Província não encontrada', 404);
             }
+
+            $provincia->setRelation('capital', $provincia->capital->capitalable);
 
             return $this->successResponse($provincia->capital->toArray());
         } catch (\Throwable $th) {
