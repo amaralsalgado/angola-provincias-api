@@ -1,7 +1,7 @@
 services:
     app:
         build:
-            context: ./../
+            context: ./../ 
             dockerfile: ./docker/Dockerfile
         container_name: angola_provinces_api
         volumes:
