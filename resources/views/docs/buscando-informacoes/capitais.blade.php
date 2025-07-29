@@ -52,13 +52,13 @@
                 "message": "Sucesso",
                 "data": [
                 {
-                "nome": "Cuíto",
-                "slug": "cuito",
+                "nome": "Ingombota",
+                "slug": "ingombota",
                 "provincia": {
-                "nome": "Bié",
-                "slug": "bie",
-                "extensao": "70.314 km²",
-                "data_fundacao": "01-05-1922"
+                "nome": "Luanda",
+                "slug": "luanda",
+                "extensao": "18.826 km²",
+                "data_fundacao": "25-01-1576"
                 }
                 },
                 //...
@@ -89,20 +89,20 @@
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
                 <x-code>
-                    // GET {{ config('app.api_base_url') }}/capitais/mocamedes
+                    // GET {{ config('app.api_base_url') }}/capitais/ingombota
 
                     {
                     "success": true,
                     "code": 200,
                     "message": "Sucesso",
                     "data": {
-                    "nome": "Moçâmedes",
-                    "slug": "mocamedes",
+                    "nome": "Ingombota",
+                    "slug": "ingombota",
                     "provincia": {
-                    "nome": "Namibe",
-                    "slug": "namibe",
-                    "extensao": "8916",
-                    "data_fundacao": "10-07-1645"
+                    "nome": "Luanda",
+                    "slug": "luanda",
+                    "extensao": "18.826 km²",
+                    "data_fundacao": "25-01-1576"
                     }
                     }
                     }

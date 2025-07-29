@@ -7,6 +7,7 @@
 
             <x-docs.menu.title name="Buscando informações" />
             <ul class="ml-7">
+            <x-docs.menu.archor link="{{route('docs.angola')}}" name="Angola"></x-docs.menu.archor>
             <x-docs.menu.archor link="{{route('docs.provincias')}}" name="Províncias"></x-docs.menu.archor>
             <x-docs.menu.archor link="{{route('docs.capitais')}}" name="Capitais"></x-docs.menu.archor>
             <x-docs.menu.archor link="{{route('docs.municipios')}}" name="Municípios"></x-docs.menu.archor>

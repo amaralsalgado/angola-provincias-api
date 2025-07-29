@@ -38,7 +38,7 @@ class CapitaisTest extends TestCase
 
     public function test_can_get_specific_capital()
     {
-        $response = $this->json('get', '/api/v1/capitais/luanda');
+        $response = $this->json('get', '/api/v1/capitais/ingombota');
 
         $expectedDataStructure = $this->getSuccessDefaultResponseStructure();
 

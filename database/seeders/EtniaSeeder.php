@@ -53,6 +53,10 @@ class EtniaSeeder extends Seeder
             [
                 'nome' => 'Minoria Oluyaneka',
                 'slug' => 'minoria-oluyaneka'
+            ],
+            [
+                'nome' => 'Bailundo',
+                'slug' => 'bailundo'
             ]
         ];
 

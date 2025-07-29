@@ -20,8 +20,8 @@ class CapitalSeeder extends Seeder
         $capitais = [
             [
                 'provincia_id' => 1,
-                'nome' => 'Caxito',
-                'slug' => 'caxito'
+                'nome' => 'Dande',
+                'slug' => 'dande'
             ],
             [
                 'provincia_id' => 2,
@@ -30,7 +30,7 @@ class CapitalSeeder extends Seeder
             ],
             [
                 'provincia_id' => 3,
-                'nome' => 'Cuíto',
+                'nome' => 'Cuito',
                 'slug' => 'cuito'
             ],
             [
@@ -45,8 +45,8 @@ class CapitalSeeder extends Seeder
             ],
             [
                 'provincia_id' => 6,
-                'nome' => 'Ndalatando',
-                'slug' => 'ndalatando'
+                'nome' => 'Cazengo',
+                'slug' => 'cazengo'
             ],
             [
                 'provincia_id' => 7,
@@ -55,8 +55,8 @@ class CapitalSeeder extends Seeder
             ],
             [
                 'provincia_id' => 8,
-                'nome' => 'Ondjiva',
-                'slug' => 'ondjiva'
+                'nome' => 'Cuanhama',
+                'slug' => 'cuanhama'
             ],
             [
                 'provincia_id' => 9,
@@ -70,8 +70,8 @@ class CapitalSeeder extends Seeder
             ],
             [
                 'provincia_id' => 11,
-                'nome' => 'Luanda',
-                'slug' => 'luanda'
+                'nome' => 'Ingombota',
+                'slug' => 'ingombota'
             ],
             [
                 'provincia_id' => 12,
@@ -80,7 +80,7 @@ class CapitalSeeder extends Seeder
             ],
             [
                 'provincia_id' => 13,
-                'nome' => 'Saurimo',
+                'nome' => 'Saurimo', //(antiga) ainda não definida
                 'slug' => 'saurimo'
             ],
             [
@@ -95,7 +95,7 @@ class CapitalSeeder extends Seeder
             ],
             [
                 'provincia_id' => 16,
-                'nome' => 'Moçâmedes',
+                'nome' => 'Moçâmedes', //(antiga) ainda não definida
                 'slug' => 'mocamedes'
             ],
             [
@@ -105,8 +105,23 @@ class CapitalSeeder extends Seeder
             ],
             [
                 'provincia_id' => 18,
-                'nome' => 'Mbanza Congo',
-                'slug' => 'mbanza-congo'
+                'nome' => 'Mbanza Kongo',
+                'slug' => 'mbanza-kongo'
+            ],
+            [
+                'provincia_id' => 19,
+                'nome' => 'Cazombo',
+                'slug' => 'cazombo'
+            ],
+            [
+                'provincia_id' => 20,
+                'nome' => 'Mavinga',
+                'slug' => 'mavinga'
+            ],
+            [
+                'provincia_id' => 21,
+                'nome' => 'Catete',
+                'slug' => 'catete'
             ]
         ];
 

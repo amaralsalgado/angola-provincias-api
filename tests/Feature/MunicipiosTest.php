@@ -36,7 +36,7 @@ class MunicipiosTest extends TestCase
 
     public function test_can_get_specific_municipio()
     {
-        $response = $this->json('get', '/api/v1/municipios/luanda');
+        $response = $this->json('get', '/api/v1/municipios/soyo');
 
         $expectedDataStructure = $this->getSuccessDefaultResponseStructure();
 
@@ -45,7 +45,7 @@ class MunicipiosTest extends TestCase
 
     public function test_can_get_all_comunas_from_municipio()
     {
-        $response = $this->json('get', '/api/v1/municipios/luanda/comunas');
+        $response = $this->json('get', '/api/v1/municipios/soyo/comunas');
 
         $expectedDataStructure = [
             '*' => [
@@ -59,7 +59,7 @@ class MunicipiosTest extends TestCase
 
     public function test_can_get_specific_comuna_from_municipio()
     {
-        $response = $this->json('get', '/api/v1/municipios/ambriz/comunas/bela-vista');
+        $response = $this->json('get', '/api/v1/municipios/kilamba-kiaxi/comunas/golfe');
 
         $expectedDataStructure = [
             'slug',
@@ -71,25 +71,13 @@ class MunicipiosTest extends TestCase
 
     public function test_can_get_all_distritos_from_municipio()
     {
-        $response = $this->json('get', '/api/v1/municipios/luanda/distritos');
+        $response = $this->json('get', '/api/v1/municipios/ingombota/distritos');
 
         $expectedDataStructure = [
             '*' => [
                 'slug',
                 'nome',
             ]
-        ];
-
-        $this->assertApiOkResponse($response, $expectedDataStructure);
-    }
-
-    public function test_can_get_specific_distrito_from_municipio()
-    {
-        $response = $this->json('get', '/api/v1/municipios/luanda/distritos/maianga');
-
-        $expectedDataStructure = [
-            'slug',
-            'nome',
         ];
 
         $this->assertApiOkResponse($response, $expectedDataStructure);

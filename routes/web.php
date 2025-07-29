@@ -16,6 +16,10 @@ Route::prefix('docs')->group(function () {
 
         //BUSCANDO INFORMAÇÕES
 
+         Route::get('/angola', function () {
+            return view('docs.buscando-informacoes.angola');
+        })->name('angola');
+
         Route::get('/provincias', function () {
             return view('docs.buscando-informacoes.provincias');
         })->name('provincias');

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome',255)->nullable(false);
             $table->string('slug',255)->nullable(false);
-            $table->string('extensao',30)->nullable(false);
+            $table->string('extensao',30)->nullable(true);
             $table->date('data_fundacao')->nullable(false);
             $table->timestamps();
         });

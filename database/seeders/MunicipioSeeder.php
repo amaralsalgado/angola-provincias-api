@@ -13,830 +13,343 @@ class MunicipioSeeder extends Seeder
      */
     public function run(): void
     {
+
         $municipios = [
-            [
-                'provincia_id' => 1,
-                'municipio' => 'Ambriz',
-                'slug' => 'ambriz'
-            ],
-            [
-                'provincia_id' => 1,
-                'municipio' => 'Bula Atumba',
-                'slug' => 'bula-atumba'
-            ],
-            [
-                'provincia_id' => 1,
-                'municipio' => 'Dande',
-                'slug' => 'dande'
-            ],
-            [
-                'provincia_id' => 1,
-                'municipio' => 'Dembos',
-                'slug' => 'dembos'
-            ],
-            [
-                'provincia_id' => 1,
-                'municipio' => 'Nambuangongo',
-                'slug' => 'nambuangongo'
-            ],
-            [
-                'provincia_id' => 1,
-                'municipio' => 'Pango Aluquém',
-                'slug' => 'pango-aluquem'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Baía Farta',
-                'slug' => 'baia-farta'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Balombo',
-                'slug' => 'balombo'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Benguela',
-                'slug' => 'benguela'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Bocoio',
-                'slug' => 'bocoio'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Caimbambo',
-                'slug' => 'caimbambo'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Catumbela',
-                'slug' => 'catumbela'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Chongoroi',
-                'slug' => 'chongoroi'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Cubal',
-                'slug' => 'cubal'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Ganda',
-                'slug' => 'ganda'
-            ],
-            [
-                'provincia_id' => 2,
-                'municipio' => 'Lobito',
-                'slug' => 'lobito'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Andulo',
-                'slug' => 'andulo'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Camacupa',
-                'slug' => 'camacupa'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Catabola',
-                'slug' => 'catabola'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Chinguar',
-                'slug' => 'chinguar'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Chitembo',
-                'slug' => 'chitembo'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Cuemba',
-                'slug' => 'cuemba'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Cunhinga',
-                'slug' => 'cunhinga'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Cuíto',
-                'slug' => 'cuito'
-            ],
-            [
-                'provincia_id' => 3,
-                'municipio' => 'Nharea',
-                'slug' => 'nharea'
-            ],
-            [
-                'provincia_id' => 4,
-                'municipio' => 'Cabinda',
-                'slug' => 'cabinda'
-            ],
-            [
-                'provincia_id' => 4,
-                'municipio' => 'Cacongo',
-                'slug' => 'cacongo'
-            ],
-            [
-                'provincia_id' => 4,
-                'municipio' => 'Buco-Zau',
-                'slug' => 'buco-zau'
-            ],
-            [
-                'provincia_id' => 4,
-                'municipio' => 'Belize',
-                'slug' => 'belize'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Calai',
-                'slug' => 'calai'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Cuangar',
-                'slug' => 'cuangar'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Cuchi',
-                'slug' => 'cuchi'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Cuito Cuanavale',
-                'slug' => 'cuito-cuanavale'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Dirico',
-                'slug' => 'dirico'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Mavinga',
-                'slug' => 'mavinga'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Menongue',
-                'slug' => 'menongue'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Nancova',
-                'slug' => 'nancova'
-            ],
-            [
-                'provincia_id' => 5,
-                'municipio' => 'Rivungo',
-                'slug' => 'rivungo'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Ambaca',
-                'slug' => 'ambaca'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Banga',
-                'slug' => 'banga'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Bolongongo',
-                'slug' => 'bolongongo'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Cambambe',
-                'slug' => 'cambambe'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Cazengo',
-                'slug' => 'cazengo'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Golungo Alto',
-                'slug' => 'golungo-alto'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Gonguembo',
-                'slug' => 'gonguembo'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Lucala',
-                'slug' => 'lucala'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Quiculungo',
-                'slug' => 'quiculungo'
-            ],
-            [
-                'provincia_id' => 6,
-                'municipio' => 'Samba Cajú',
-                'slug' => 'samba-caju'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Gabela',
-                'slug' => 'gabela'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Cassongue',
-                'slug' => 'cassongue'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Cela',
-                'slug' => 'cela'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Conda',
-                'slug' => 'conda'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Ebo',
-                'slug' => 'ebo'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Libolo',
-                'slug' => 'libolo'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Mussende',
-                'slug' => 'mussende'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Porto Amboim',
-                'slug' => 'porto-amboim'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Quilenda',
-                'slug' => 'quilenda'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Quibala',
-                'slug' => 'quibala'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Seles',
-                'slug' => 'seles'
-            ],
-            [
-                'provincia_id' => 7,
-                'municipio' => 'Sumbe',
-                'slug' => 'sumbe'
-            ],
-            [
-                'provincia_id' => 8,
-                'municipio' => 'Cahama',
-                'slug' => 'cahama'
-            ],
-            [
-                'provincia_id' => 8,
-                'municipio' => 'Cuanhama',
-                'slug' => 'cuanhama'
-            ],
-            [
-                'provincia_id' => 8,
-                'municipio' => 'Curoca',
-                'slug' => 'curoca'
-            ],
-            [
-                'provincia_id' => 8,
-                'municipio' => 'Cuvelai',
-                'slug' => 'cuvelai'
-            ],
-            [
-                'provincia_id' => 8,
-                'municipio' => 'Namacunde',
-                'slug' => 'namacunde'
-            ],
-            [
-                'provincia_id' => 8,
-                'municipio' => 'Ombadja',
-                'slug' => 'ombadja'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Longonjo',
-                'slug' => 'longonjo'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Bailundo',
-                'slug' => 'bailundo'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Chicala Choloanga',
-                'slug' => 'chicala-choloanga'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Mungo',
-                'slug' => 'mungo'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Londuimbale',
-                'slug' => 'londuimbale'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Tchindjenje',
-                'slug' => 'tchindjenje'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Ucuma',
-                'slug' => 'ucuma'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Cachiungo',
-                'slug' => 'cachiungo'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Caála',
-                'slug' => 'caala'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Ecunha',
-                'slug' => 'ecunha'
-            ],
-            [
-                'provincia_id' => 9,
-                'municipio' => 'Huambo',
-                'slug' => 'huambo'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Caconda',
-                'slug' => 'caconda'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Cacula',
-                'slug' => 'cacula'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Caluquembe',
-                'slug' => 'caluquembe'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Gambos',
-                'slug' => 'gambos'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Chibia',
-                'slug' => 'chibia'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Chicomba',
-                'slug' => 'chicomba'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Chipindo',
-                'slug' => 'chipindo'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Cuvango',
-                'slug' => 'cuvango'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Humpata',
-                'slug' => 'humpata'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Jamba',
-                'slug' => 'jamba'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Lubango',
-                'slug' => 'lubango'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Matala',
-                'slug' => 'matala'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Quilengues',
-                'slug' => 'quilengues'
-            ],
-            [
-                'provincia_id' => 10,
-                'municipio' => 'Quipungo',
-                'slug' => 'quipungo'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Icolo e Bengo',
-                'slug' => 'icolo-e-bengo'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Luanda',
-                'slug' => 'luanda'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Quiçama',
-                'slug' => 'quicama'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Cacuaco',
-                'slug' => 'cacuaco'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Cazenga',
-                'slug' => 'cazenga'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Viana',
-                'slug' => 'viana'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Belas',
-                'slug' => 'belas'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Kilamba Kiaxi',
-                'slug' => 'kilamba-kiaxi'
-            ],
-            [
-                'provincia_id' => 11,
-                'municipio' => 'Talatona',
-                'slug' => 'talatona'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Cambulo',
-                'slug' => 'cambulo'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Capenda Camulemba',
-                'slug' => 'capenda-camulemba'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Caungula',
-                'slug' => 'caungula'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Chitato',
-                'slug' => 'chitato'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Cuango',
-                'slug' => 'cuango'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Cuílo',
-                'slug' => 'cuilo'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Lubalo',
-                'slug' => 'lubalo'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Lucapa',
-                'slug' => 'lucapa'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Lóvua',
-                'slug' => 'lovua'
-            ],
-            [
-                'provincia_id' => 12,
-                'municipio' => 'Xá-Muteba',
-                'slug' => 'xa-muteba'
-            ],
-            [
-                'provincia_id' => 13,
-                'municipio' => 'Cacolo',
-                'slug' => 'cacolo'
-            ],
-            [
-                'provincia_id' => 13,
-                'municipio' => 'Dala',
-                'slug' => 'dala'
-            ],
-            [
-                'provincia_id' => 13,
-                'municipio' => 'Muconda',
-                'slug' => 'muconda'
-            ],
-            [
-                'provincia_id' => 13,
-                'municipio' => 'Saurimo',
-                'slug' => 'saurimo'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Cacuso',
-                'slug' => 'cacuso'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Caombo',
-                'slug' => 'caombo'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Calandula',
-                'slug' => 'calandula'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Cambundi-Catembo',
-                'slug' => 'cambundi-catembo'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Cangandala',
-                'slug' => 'cangandala'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Cuaba Nzogo',
-                'slug' => 'cuaba-nzogo'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Cunda-Dia-Baze',
-                'slug' => 'cunda-dia-baze'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Luquembo',
-                'slug' => 'luquembo'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Malanje',
-                'slug' => 'malanje'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Marimba',
-                'slug' => 'marimba'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Massango',
-                'slug' => 'massango'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Mucari',
-                'slug' => 'mucari'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Quela',
-                'slug' => 'quela'
-            ],
-            [
-                'provincia_id' => 14,
-                'municipio' => 'Quirima',
-                'slug' => 'quirima'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Alto Zambeze',
-                'slug' => 'alto-zambeze'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Bundas',
-                'slug' => 'bundas'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Camanongue',
-                'slug' => 'camanongue'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Léua',
-                'slug' => 'leua'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Luacano',
-                'slug' => 'luacano'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Moxico',
-                'slug' => 'moxico'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Luchazes',
-                'slug' => 'luchazes'
-            ],
-            [
-                'provincia_id' => 15,
-                'municipio' => 'Cameia',
-                'slug' => 'cameia'
-            ],
-            [
-                'provincia_id' => 16,
-                'municipio' => 'Moçâmedes',
-                'slug' => 'mocamedes'
-            ],
-            [
-                'provincia_id' => 16,
-                'municipio' => 'Camucuio',
-                'slug' => 'camucuio'
-            ],
-            [
-                'provincia_id' => 16,
-                'municipio' => 'Bibala',
-                'slug' => 'bibala'
-            ],
-            [
-                'provincia_id' => 16,
-                'municipio' => 'Virei',
-                'slug' => 'virei'
-            ],
-            [
-                'provincia_id' => 16,
-                'municipio' => 'Tômbua',
-                'slug' => 'tombua'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Uíge',
-                'slug' => 'uige'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Alto Cauale',
-                'slug' => 'alto-cauale'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Ambuíla',
-                'slug' => 'ambuila'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Bembe',
-                'slug' => 'bembe'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Buengas',
-                'slug' => 'buengas'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Bungo',
-                'slug' => 'bungo'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Milunga',
-                'slug' => 'milunga'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Damba',
-                'slug' => 'damba'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Maquela do Zombo',
-                'slug' => 'maquela-do-zombo'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Mucaba',
-                'slug' => 'mucaba'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Negage',
-                'slug' => 'negage'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Puri',
-                'slug' => 'puri'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Quimbele',
-                'slug' => 'quimbele'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Quitexe',
-                'slug' => 'quitexe'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Sanza Pombo',
-                'slug' => 'sanza-pombo'
-            ],
-            [
-                'provincia_id' => 17,
-                'municipio' => 'Songo',
-                'slug' => 'songo'
-            ],
-            [
-                'provincia_id' => 18,
-                'municipio' => 'Mbanza Congo',
-                'slug' => 'mbanza-congo'
-            ],
-            [
-                'provincia_id' => 18,
-                'municipio' => 'Soyo',
-                'slug' => 'soyo'
-            ],
-            [
-                'provincia_id' => 18,
-                'municipio' => 'Nzeto',
-                'slug' => 'nzeto'
-            ],
-            [
-                'provincia_id' => 18,
-                'municipio' => 'Cuimba',
-                'slug' => 'cuimba'
-            ],
-            [
-                'provincia_id' => 18,
-                'municipio' => 'Nóqui',
-                'slug' => 'noqui'
-            ],
-            [
-                'provincia_id' => 18,
-                'municipio' => 'Tomboco',
-                'slug' => 'tomboco'
-            ]
+            ['provincia_id' => 1, 'municipio' => 'Bula Atumba', 'slug' => 'bula-atumba'],
+            ['provincia_id' => 1, 'municipio' => 'Dande', 'slug' => 'dande'],
+            ['provincia_id' => 1, 'municipio' => 'Quibaxe', 'slug' => 'quibaxe'],
+            ['provincia_id' => 1, 'municipio' => 'Nambuangongo', 'slug' => 'nambuangongo'],
+            ['provincia_id' => 1, 'municipio' => 'Pango Aluquém', 'slug' => 'pango-aluquem'],
+            ['provincia_id' => 1, 'municipio' => 'Ambriz', 'slug' => 'ambriz'],
+            ['provincia_id' => 1, 'municipio' => 'Muxaluando', 'slug' => 'muxaluando'],
+            ['provincia_id' => 1, 'municipio' => 'Piri', 'slug' => 'piri'],
+            ['provincia_id' => 1, 'municipio' => 'Quicunzo', 'slug' => 'quicunzo'],
+            ['provincia_id' => 1, 'municipio' => 'Úcua', 'slug' => 'ucua'],
+            ['provincia_id' => 1, 'municipio' => 'Pangila', 'slug' => 'pangila'],
+            ['provincia_id' => 1, 'municipio' => 'Barra do Dande', 'slug' => 'barra-do-dande'],
+            ['provincia_id' => 2, 'municipio' => 'Baía Farta', 'slug' => 'baia-farta'],
+            ['provincia_id' => 2, 'municipio' => 'Balombo', 'slug' => 'balombo'],
+            ['provincia_id' => 2, 'municipio' => 'Bocoio', 'slug' => 'bocoio'],
+            ['provincia_id' => 2, 'municipio' => 'Caimbambo', 'slug' => 'caimbambo'],
+            ['provincia_id' => 2, 'municipio' => 'Catumbela', 'slug' => 'catumbela'],
+            ['provincia_id' => 2, 'municipio' => 'Chongorói', 'slug' => 'chongoroi'],
+            ['provincia_id' => 2, 'municipio' => 'Cubal', 'slug' => 'cubal'],
+            ['provincia_id' => 2, 'municipio' => 'Ganda', 'slug' => 'ganda'],
+            ['provincia_id' => 2, 'municipio' => 'Lobito', 'slug' => 'lobito'],
+            ['provincia_id' => 2, 'municipio' => 'Benguela', 'slug' => 'benguela'],
+            ['provincia_id' => 2, 'municipio' => 'Egito Praia', 'slug' => 'egito-praia'],
+            ['provincia_id' => 2, 'municipio' => 'Chindumbo', 'slug' => 'chindumbo'],
+            ['provincia_id' => 2, 'municipio' => 'Dombe Grande', 'slug' => 'dombe-grande'],
+            ['provincia_id' => 2, 'municipio' => 'Capupa', 'slug' => 'capupa'],
+            ['provincia_id' => 2, 'municipio' => 'Biópio', 'slug' => 'biopio'],
+            ['provincia_id' => 2, 'municipio' => 'Chila', 'slug' => 'chila'],
+            ['provincia_id' => 2, 'municipio' => 'Chicuma', 'slug' => 'chicuma'],
+            ['provincia_id' => 2, 'municipio' => 'Babaera', 'slug' => 'babaera'],
+            ['provincia_id' => 2, 'municipio' => 'Iambala', 'slug' => 'iambala'],
+            ['provincia_id' => 2, 'municipio' => 'Catengue', 'slug' => 'catengue'],
+            ['provincia_id' => 2, 'municipio' => 'Bolonguera', 'slug' => 'bolonguera'],
+            ['provincia_id' => 2, 'municipio' => 'Canhamela', 'slug' => 'canhamela'],
+            ['provincia_id' => 2, 'municipio' => 'Navegantes', 'slug' => 'navegantes'],
+            ['provincia_id' => 3, 'municipio' => 'Andulo', 'slug' => 'andulo'],
+            ['provincia_id' => 3, 'municipio' => 'Camacupa', 'slug' => 'camacupa'],
+            ['provincia_id' => 3, 'municipio' => 'Catabola', 'slug' => 'catabola'],
+            ['provincia_id' => 3, 'municipio' => 'Chinguar', 'slug' => 'chinguar'],
+            ['provincia_id' => 3, 'municipio' => 'Chitembo', 'slug' => 'chitembo'],
+            ['provincia_id' => 3, 'municipio' => 'Cuemba', 'slug' => 'cuemba'],
+            ['provincia_id' => 3, 'municipio' => 'Cuito', 'slug' => 'cuito'],
+            ['provincia_id' => 3, 'municipio' => 'Cunhinga', 'slug' => 'cunhinga'],
+            ['provincia_id' => 3, 'municipio' => 'Nharêa', 'slug' => 'nharea'],
+            ['provincia_id' => 3, 'municipio' => 'Luando', 'slug' => 'luando'],
+            ['provincia_id' => 3, 'municipio' => 'Ringoma', 'slug' => 'ringoma'],
+            ['provincia_id' => 3, 'municipio' => 'Mumbuê', 'slug' => 'mumbue'],
+            ['provincia_id' => 3, 'municipio' => 'CalucingA', 'slug' => 'calucinga'],
+            ['provincia_id' => 3, 'municipio' => 'Chicala', 'slug' => 'chicala'],
+            ['provincia_id' => 3, 'municipio' => 'Chipeta', 'slug' => 'chipeta'],
+            ['provincia_id' => 3, 'municipio' => 'Umpulo', 'slug' => 'umpulo'],
+            ['provincia_id' => 3, 'municipio' => 'Lúbia', 'slug' => 'lubia'],
+            ['provincia_id' => 3, 'municipio' => 'Cambândua', 'slug' => 'cambandua'],
+            ['provincia_id' => 3, 'municipio' => 'Belo Horizonte', 'slug' => 'belo-horizonte'],
+            ['provincia_id' => 4, 'municipio' => 'Belize', 'slug' => 'belize'],
+            ['provincia_id' => 4, 'municipio' => 'Buco-Zau', 'slug' => 'buco-zau'],
+            ['provincia_id' => 4, 'municipio' => 'Cabinda', 'slug' => 'cabinda'],
+            ['provincia_id' => 4, 'municipio' => 'Cacongo', 'slug' => 'cacongo'],
+            ['provincia_id' => 4, 'municipio' => 'Miconje', 'slug' => 'miconje'],
+            ['provincia_id' => 4, 'municipio' => 'Massabi', 'slug' => 'massabi'],
+            ['provincia_id' => 4, 'municipio' => 'Necuto', 'slug' => 'necuto'],
+            ['provincia_id' => 4, 'municipio' => 'Tando Zinze', 'slug' => 'tando-zinze'],
+            ['provincia_id' => 4, 'municipio' => 'Liambo', 'slug' => 'liambo'],
+            ['provincia_id' => 4, 'municipio' => 'Ngoio', 'slug' => 'ngoio'],
+            ['provincia_id' => 5, 'municipio' => 'Calai', 'slug' => 'calai'],
+            ['provincia_id' => 5, 'municipio' => 'Cuangar', 'slug' => 'cuangar'],
+            ['provincia_id' => 5, 'municipio' => 'Cuchi', 'slug' => 'cuchi'],
+            ['provincia_id' => 5, 'municipio' => 'Cutato', 'slug' => 'cutato'],
+            ['provincia_id' => 5, 'municipio' => 'Caiundo', 'slug' => 'caiundo'],
+            ['provincia_id' => 5, 'municipio' => 'Longa', 'slug' => 'longa'],
+            ['provincia_id' => 5, 'municipio' => 'Menongue', 'slug' => 'menongue'],
+            ['provincia_id' => 5, 'municipio' => 'Nancova', 'slug' => 'nancova'],
+            ['provincia_id' => 5, 'municipio' => 'Savate', 'slug' => 'savate'],
+            ['provincia_id' => 5, 'municipio' => 'Chinguanja', 'slug' => 'chinguanja'],
+            ['provincia_id' => 5, 'municipio' => 'Mavengue', 'slug' => 'mavengue'],
+            ['provincia_id' => 6, 'municipio' => 'Ambaca', 'slug' => 'ambaca'],
+            ['provincia_id' => 6, 'municipio' => 'Banga', 'slug' => 'banga'],
+            ['provincia_id' => 6, 'municipio' => 'Bolongongo', 'slug' => 'bolongongo'],
+            ['provincia_id' => 6, 'municipio' => 'Cambambe', 'slug' => 'cambambe'],
+            ['provincia_id' => 6, 'municipio' => 'Cazengo', 'slug' => 'cazengo'],
+            ['provincia_id' => 6, 'municipio' => 'Golungo Alto', 'slug' => 'golungo-alto'],
+            ['provincia_id' => 6, 'municipio' => 'Lucala', 'slug' => 'lucala'],
+            ['provincia_id' => 6, 'municipio' => 'Ngonguembo', 'slug' => 'ngonguembo'],
+            ['provincia_id' => 6, 'municipio' => 'Quiculungo', 'slug' => 'quiculungo'],
+            ['provincia_id' => 6, 'municipio' => 'Samba Cajú', 'slug' => 'samba-caju'],
+            ['provincia_id' => 6, 'municipio' => 'Massangano', 'slug' => 'massangano'],
+            ['provincia_id' => 6, 'municipio' => 'Cêrca', 'slug' => 'cerca'],
+            ['provincia_id' => 6, 'municipio' => 'Tango', 'slug' => 'tango'],
+            ['provincia_id' => 6, 'municipio' => 'Terreiro', 'slug' => 'terreiro'],
+            ['provincia_id' => 6, 'municipio' => 'Aldeia Nova', 'slug' => 'aldeia-nova'],
+            ['provincia_id' => 6, 'municipio' => 'Caculo Cabaça', 'slug' => 'caculo-cabaca'],
+            ['provincia_id' => 6, 'municipio' => 'Luinga', 'slug' => 'luinga'],
+            ['provincia_id' => 7, 'municipio' => 'Gabela', 'slug' => 'gabela'],
+            ['provincia_id' => 7, 'municipio' => 'Cassongue', 'slug' => 'cassongue'],
+            ['provincia_id' => 7, 'municipio' => 'Waku Kungo', 'slug' => 'waku-kungo'],
+            ['provincia_id' => 7, 'municipio' => 'Conda', 'slug' => 'conda'],
+            ['provincia_id' => 7, 'municipio' => 'Ebo', 'slug' => 'ebo'],
+            ['provincia_id' => 7, 'municipio' => 'Calulo', 'slug' => 'calulo'],
+            ['provincia_id' => 7, 'municipio' => 'Mussende', 'slug' => 'mussende'],
+            ['provincia_id' => 7, 'municipio' => 'Porto Amboim', 'slug' => 'porto-amboim'],
+            ['provincia_id' => 7, 'municipio' => 'Quibala', 'slug' => 'quibala'],
+            ['provincia_id' => 7, 'municipio' => 'Quilenda', 'slug' => 'quilenda'],
+            ['provincia_id' => 7, 'municipio' => 'Seles', 'slug' => 'seles'],
+            ['provincia_id' => 7, 'municipio' => 'Sumbe', 'slug' => 'sumbe'],
+            ['provincia_id' => 7, 'municipio' => 'Quirimbo', 'slug' => 'quirimbo'],
+            ['provincia_id' => 7, 'municipio' => 'Munenga', 'slug' => 'munenga'],
+            ['provincia_id' => 7, 'municipio' => 'Quissongo', 'slug' => 'quissongo'],
+            ['provincia_id' => 7, 'municipio' => 'Gungo', 'slug' => 'gungo'],
+            ['provincia_id' => 7, 'municipio' => 'Sanga', 'slug' => 'sanga'],
+            ['provincia_id' => 7, 'municipio' => 'Gangula', 'slug' => 'gangula'],
+            ['provincia_id' => 7, 'municipio' => 'Pambangala', 'slug' => 'pambangala'],
+            ['provincia_id' => 7, 'municipio' => 'Condé', 'slug' => 'conde'],
+            ['provincia_id' => 7, 'municipio' => 'Amboiva', 'slug' => 'amboiva'],
+            ['provincia_id' => 7, 'municipio' => 'Lonhe', 'slug' => 'lonhe'],
+            ['provincia_id' => 7, 'municipio' => 'Quenha', 'slug' => 'quenha'],
+            ['provincia_id' => 7, 'municipio' => 'Boa Entrada', 'slug' => 'boa-entrada'],
+            ['provincia_id' => 8, 'municipio' => 'Cahama', 'slug' => 'cahama'],
+            ['provincia_id' => 8, 'municipio' => 'Cuanhama', 'slug' => 'cuanhama'],
+            ['provincia_id' => 8, 'municipio' => 'Curoca', 'slug' => 'curoca'],
+            ['provincia_id' => 8, 'municipio' => 'Cuvelai', 'slug' => 'cuvelai'],
+            ['provincia_id' => 8, 'municipio' => 'Namacunde', 'slug' => 'namacunde'],
+            ['provincia_id' => 8, 'municipio' => 'Ombandja', 'slug' => 'ombandja'],
+            ['provincia_id' => 8, 'municipio' => 'Chiéde', 'slug' => 'chiede'],
+            ['provincia_id' => 8, 'municipio' => 'Nehone', 'slug' => 'nehone'],
+            ['provincia_id' => 8, 'municipio' => 'Humbe', 'slug' => 'humbe'],
+            ['provincia_id' => 8, 'municipio' => 'Mupa', 'slug' => 'mupa'],
+            ['provincia_id' => 8, 'municipio' => 'Naulila', 'slug' => 'naulila'],
+            ['provincia_id' => 8, 'municipio' => 'Chitado', 'slug' => 'chitado'],
+            ['provincia_id' => 8, 'municipio' => 'Cafima', 'slug' => 'cafima'],
+            ['provincia_id' => 8, 'municipio' => 'Chissuata', 'slug' => 'chissuata'],
+            ['provincia_id' => 9, 'municipio' => 'Bailundo', 'slug' => 'bailundo'],
+            ['provincia_id' => 9, 'municipio' => 'Caála', 'slug' => 'caala'],
+            ['provincia_id' => 9, 'municipio' => 'Cachiungo', 'slug' => 'cachiungo'],
+            ['provincia_id' => 9, 'municipio' => 'Chicala Choloanga', 'slug' => 'chicala-choloanga'],
+            ['provincia_id' => 9, 'municipio' => 'Chinjenje', 'slug' => 'chinjenje'],
+            ['provincia_id' => 9, 'municipio' => 'Ecunha', 'slug' => 'ecunha'],
+            ['provincia_id' => 9, 'municipio' => 'Huambo', 'slug' => 'huambo'],
+            ['provincia_id' => 9, 'municipio' => 'Londuimbali', 'slug' => 'londuimbali'],
+            ['provincia_id' => 9, 'municipio' => 'Longonjo', 'slug' => 'longonjo'],
+            ['provincia_id' => 9, 'municipio' => 'Mungo', 'slug' => 'mungo'],
+            ['provincia_id' => 9, 'municipio' => 'Ucuma', 'slug' => 'ucuma'],
+            ['provincia_id' => 9, 'municipio' => 'Bimbe', 'slug' => 'bimbe'],
+            ['provincia_id' => 9, 'municipio' => 'Sambo', 'slug' => 'sambo'],
+            ['provincia_id' => 9, 'municipio' => 'Galanga', 'slug' => 'galanga'],
+            ['provincia_id' => 9, 'municipio' => 'Alto Hama', 'slug' => 'alto-hama'],
+            ['provincia_id' => 9, 'municipio' => 'Chilata', 'slug' => 'chilata'],
+            ['provincia_id' => 9, 'municipio' => 'Cuima', 'slug' => 'cuima'],
+            ['provincia_id' => 10, 'municipio' => 'Caconda', 'slug' => 'caconda'],
+            ['provincia_id' => 10, 'municipio' => 'Cacula', 'slug' => 'cacula'],
+            ['provincia_id' => 10, 'municipio' => 'Caluquembe', 'slug' => 'caluquembe'],
+            ['provincia_id' => 10, 'municipio' => 'Chibia', 'slug' => 'chibia'],
+            ['provincia_id' => 10, 'municipio' => 'Chicomba', 'slug' => 'chicomba'],
+            ['provincia_id' => 10, 'municipio' => 'Chipindo', 'slug' => 'chipindo'],
+            ['provincia_id' => 10, 'municipio' => 'Cuvango', 'slug' => 'cuvango'],
+            ['provincia_id' => 10, 'municipio' => 'Gambos', 'slug' => 'gambos'],
+            ['provincia_id' => 10, 'municipio' => 'Humpata', 'slug' => 'humpata'],
+            ['provincia_id' => 10, 'municipio' => 'Jamba Mineira', 'slug' => 'jamba-mineira'],
+            ['provincia_id' => 10, 'municipio' => 'Lubango', 'slug' => 'lubango'],
+            ['provincia_id' => 10, 'municipio' => 'Matala', 'slug' => 'matala'],
+            ['provincia_id' => 10, 'municipio' => 'Quilengues', 'slug' => 'quilengues'],
+            ['provincia_id' => 10, 'municipio' => 'Quipungo', 'slug' => 'quipungo'],
+            ['provincia_id' => 10, 'municipio' => 'Dongo', 'slug' => 'dongo'],
+            ['provincia_id' => 10, 'municipio' => 'Hoque', 'slug' => 'hoque'],
+            ['provincia_id' => 10, 'municipio' => 'Capelongo', 'slug' => 'capelongo'],
+            ['provincia_id' => 10, 'municipio' => 'Chituto', 'slug' => 'chituto'],
+            ['provincia_id' => 10, 'municipio' => 'Capunda Cavilongo', 'slug' => 'capunda-cavilongo'],
+            ['provincia_id' => 10, 'municipio' => 'Viti Vivali', 'slug' => 'viti-vivali'],
+            ['provincia_id' => 10, 'municipio' => 'Galangue', 'slug' => 'galangue'],
+            ['provincia_id' => 10, 'municipio' => 'Palanca', 'slug' => 'palanca'],
+            ['provincia_id' => 10, 'municipio' => 'Chicungo', 'slug' => 'chicungo'],
+            ['provincia_id' => 11, 'municipio' => 'Belas', 'slug' => 'belas'],
+            ['provincia_id' => 11, 'municipio' => 'Cacuaco', 'slug' => 'cacuaco'],
+            ['provincia_id' => 11, 'municipio' => 'Cazenga', 'slug' => 'cazenga'],
+            ['provincia_id' => 11, 'municipio' => 'Kilamba Kiaxi', 'slug' => 'kilamba-kiaxi'],
+            ['provincia_id' => 11, 'municipio' => 'Viana', 'slug' => 'viana'],
+            ['provincia_id' => 11, 'municipio' => 'Mussulo', 'slug' => 'mussulo'],
+            ['provincia_id' => 11, 'municipio' => 'Sambizanga', 'slug' => 'sambizanga'],
+            ['provincia_id' => 11, 'municipio' => 'Rangel', 'slug' => 'rangel'],
+            ['provincia_id' => 11, 'municipio' => 'Maianga', 'slug' => 'maianga'],
+            ['provincia_id' => 11, 'municipio' => 'Samba', 'slug' => 'samba'],
+            ['provincia_id' => 11, 'municipio' => 'Camama', 'slug' => 'camama'],
+            ['provincia_id' => 11, 'municipio' => 'Mulenvos', 'slug' => 'mulenvos'],
+            ['provincia_id' => 11, 'municipio' => 'Kilamba', 'slug' => 'kilamba'],
+            ['provincia_id' => 11, 'municipio' => 'Hoji Ya Henda', 'slug' => 'hoji-ya-henda'],
+            ['provincia_id' => 11, 'municipio' => 'Ingombota', 'slug' => 'ingombota'],
+            ['provincia_id' => 11, 'municipio' => 'Talatona', 'slug' => 'talatona'],
+            ['provincia_id' => 12, 'municipio' => 'Cambulo', 'slug' => 'cambulo'],
+            ['provincia_id' => 12, 'municipio' => 'Capenda Camulemba', 'slug' => 'capenda-camulemba'],
+            ['provincia_id' => 12, 'municipio' => 'Caungula', 'slug' => 'caungula'],
+            ['provincia_id' => 12, 'municipio' => 'Chitato', 'slug' => 'chitato'],
+            ['provincia_id' => 12, 'municipio' => 'Cuango', 'slug' => 'cuango'],
+            ['provincia_id' => 12, 'municipio' => 'Cuílo', 'slug' => 'cuilo'],
+            ['provincia_id' => 12, 'municipio' => 'Lubalo', 'slug' => 'lubalo'],
+            ['provincia_id' => 12, 'municipio' => 'Lucapa', 'slug' => 'lucapa'],
+            ['provincia_id' => 12, 'municipio' => 'Lóvua', 'slug' => 'lovua'],
+            ['provincia_id' => 12, 'municipio' => 'Xá-Muteba', 'slug' => 'xa-muteba'],
+            ['provincia_id' => 12, 'municipio' => 'Dundo', 'slug' => 'dundo'],
+            ['provincia_id' => 12, 'municipio' => 'Xá Cassau', 'slug' => 'xa-cassau'],
+            ['provincia_id' => 12, 'municipio' => 'Camaxilo', 'slug' => 'camaxilo'],
+            ['provincia_id' => 12, 'municipio' => 'Luangue', 'slug' => 'luangue'],
+            ['provincia_id' => 12, 'municipio' => 'Luremo', 'slug' => 'luremo'],
+            ['provincia_id' => 12, 'municipio' => 'Canzar', 'slug' => 'canzar'],
+            ['provincia_id' => 12, 'municipio' => 'Cassanje Calucala', 'slug' => 'cassanje-calucala'],
+            ['provincia_id' => 12, 'municipio' => 'Mussungue', 'slug' => 'mussungue'],
+            ['provincia_id' => 12, 'municipio' => 'Cafunfu', 'slug' => 'cafunfu'],
+            ['provincia_id' => 13, 'municipio' => 'Cacolo', 'slug' => 'cacolo'],
+            ['provincia_id' => 13, 'municipio' => 'Dala', 'slug' => 'dala'],
+            ['provincia_id' => 13, 'municipio' => 'Muconda', 'slug' => 'muconda'],
+            ['provincia_id' => 13, 'municipio' => 'Saurimo', 'slug' => 'saurimo'],
+            ['provincia_id' => 13, 'municipio' => 'Chiluage', 'slug' => 'chiluage'],
+            ['provincia_id' => 13, 'municipio' => 'Cassai-Sul', 'slug' => 'cassai-sul'],
+            ['provincia_id' => 13, 'municipio' => 'Xassengue', 'slug' => 'xassengue'],
+            ['provincia_id' => 13, 'municipio' => 'Alto Chicapa', 'slug' => 'alto-chicapa'],
+            ['provincia_id' => 13, 'municipio' => 'Sombo', 'slug' => 'sombo'],
+            ['provincia_id' => 13, 'municipio' => 'Muriege', 'slug' => 'muriege'],
+            ['provincia_id' => 13, 'municipio' => 'Luma Cassai', 'slug' => 'luma-cassai'],
+            ['provincia_id' => 13, 'municipio' => 'Cazage', 'slug' => 'cazage'],
+            ['provincia_id' => 13, 'municipio' => 'Muangueji', 'slug' => 'muangueji'],
+            ['provincia_id' => 13, 'municipio' => 'Cassengo', 'slug' => 'cassengo'],
+            ['provincia_id' => 14, 'municipio' => 'Cacuso', 'slug' => 'cacuso'],
+            ['provincia_id' => 14, 'municipio' => 'Cahombo', 'slug' => 'cahombo'],
+            ['provincia_id' => 14, 'municipio' => 'Calandula', 'slug' => 'calandula'],
+            ['provincia_id' => 14, 'municipio' => 'Cambundi Catembo', 'slug' => 'cambundi-catembo'],
+            ['provincia_id' => 14, 'municipio' => 'Cangandala', 'slug' => 'cangandala'],
+            ['provincia_id' => 14, 'municipio' => 'Kiwaba Nzoji', 'slug' => 'kiwaba-nzoji'],
+            ['provincia_id' => 14, 'municipio' => 'Kunda Dya Baze', 'slug' => 'kunda-dya-baze'],
+            ['provincia_id' => 14, 'municipio' => 'Luquembo', 'slug' => 'luquembo'],
+            ['provincia_id' => 14, 'municipio' => 'Malanje', 'slug' => 'malanje'],
+            ['provincia_id' => 14, 'municipio' => 'Marimba', 'slug' => 'marimba'],
+            ['provincia_id' => 14, 'municipio' => 'Massango', 'slug' => 'massango'],
+            ['provincia_id' => 14, 'municipio' => 'Quela', 'slug' => 'quela'],
+            ['provincia_id' => 14, 'municipio' => 'Quirima', 'slug' => 'quirima'],
+            ['provincia_id' => 14, 'municipio' => 'Cateco Cangola', 'slug' => 'cateco-cangola'],
+            ['provincia_id' => 14, 'municipio' => 'Cuale', 'slug' => 'cuale'],
+            ['provincia_id' => 14, 'municipio' => 'Pungo A Ndongo', 'slug' => 'pungo-a-ndongo'],
+            ['provincia_id' => 14, 'municipio' => 'Ngola Luiji', 'slug' => 'ngola-luiji'],
+            ['provincia_id' => 14, 'municipio' => 'Quihuhu', 'slug' => 'quihuhu'],
+            ['provincia_id' => 14, 'municipio' => 'Xandel', 'slug' => 'xandel'],
+            ['provincia_id' => 14, 'municipio' => 'Cambo Suinginge', 'slug' => 'cambo-suinginge'],
+            ['provincia_id' => 14, 'municipio' => 'Milando', 'slug' => 'milando'],
+            ['provincia_id' => 14, 'municipio' => 'Quitapa', 'slug' => 'quitapa'],
+            ['provincia_id' => 14, 'municipio' => 'Capunda', 'slug' => 'capunda'],
+            ['provincia_id' => 14, 'municipio' => 'Muquixe', 'slug' => 'muquixe'],
+            ['provincia_id' => 14, 'municipio' => 'Quêssua', 'slug' => 'quessua'],
+            ['provincia_id' => 14, 'municipio' => 'Caculama', 'slug' => 'caculama'],
+            ['provincia_id' => 14, 'municipio' => 'Mbanji Ya Ngola', 'slug' => 'mbanji-ya-ngola'],
+            ['provincia_id' => 15, 'municipio' => 'Chiúme', 'slug' => 'chiume'],
+            ['provincia_id' => 15, 'municipio' => 'Lumbala Nguimbo', 'slug' => 'lumbala-nguimbo'],
+            ['provincia_id' => 15, 'municipio' => 'Camanongue', 'slug' => 'camanongue'],
+            ['provincia_id' => 15, 'municipio' => 'Léua', 'slug' => 'leua'],
+            ['provincia_id' => 15, 'municipio' => 'Alto Cuito', 'slug' => 'alto-cuito'],
+            ['provincia_id' => 15, 'municipio' => 'Lutembo', 'slug' => 'lutembo'],
+            ['provincia_id' => 15, 'municipio' => 'Cangumbe', 'slug' => 'cangumbe'],
+            ['provincia_id' => 15, 'municipio' => 'Luena', 'slug' => 'luena'],
+            ['provincia_id' => 15, 'municipio' => 'Cangamba', 'slug' => 'cangamba'],
+            ['provincia_id' => 15, 'municipio' => 'Lucusse', 'slug' => 'lucusse'],
+            ['provincia_id' => 15, 'municipio' => 'Ninda', 'slug' => 'ninda'],
+            ['provincia_id' => 15, 'municipio' => 'Lutuai', 'slug' => 'lutuai'],
+            ['provincia_id' => 16, 'municipio' => 'Moçâmedes', 'slug' => 'mocamedes'],
+            ['provincia_id' => 16, 'municipio' => 'Camucuio', 'slug' => 'camucuio'],
+            ['provincia_id' => 16, 'municipio' => 'Bibala', 'slug' => 'bibala'],
+            ['provincia_id' => 16, 'municipio' => 'Virei', 'slug' => 'virei'],
+            ['provincia_id' => 16, 'municipio' => 'Tômbua', 'slug' => 'tombua'],
+            ['provincia_id' => 16, 'municipio' => 'Lucira', 'slug' => 'lucira'],
+            ['provincia_id' => 16, 'municipio' => 'Iona', 'slug' => 'iona'],
+            ['provincia_id' => 16, 'municipio' => 'Sacomar', 'slug' => 'sacomar'],
+            ['provincia_id' => 16, 'municipio' => 'Cacimbas', 'slug' => 'cacimbas'],
+            ['provincia_id' => 17, 'municipio' => 'Uíge', 'slug' => 'uige'],
+            ['provincia_id' => 17, 'municipio' => 'Cangola', 'slug' => 'cangola'],
+            ['provincia_id' => 17, 'municipio' => 'Ambuíla', 'slug' => 'ambuíla'],
+            ['provincia_id' => 17, 'municipio' => 'Bembe', 'slug' => 'bembe'],
+            ['provincia_id' => 17, 'municipio' => 'Nova Esperança', 'slug' => 'nova-esperanca'],
+            ['provincia_id' => 17, 'municipio' => 'Bungo', 'slug' => 'bungo'],
+            ['provincia_id' => 17, 'municipio' => 'Milunga', 'slug' => 'milunga'],
+            ['provincia_id' => 17, 'municipio' => 'Damba', 'slug' => 'damba'],
+            ['provincia_id' => 17, 'municipio' => 'Maquela do Zombo', 'slug' => 'maquela-do-zombo'],
+            ['provincia_id' => 17, 'municipio' => 'Mucaba', 'slug' => 'mucaba'],
+            ['provincia_id' => 17, 'municipio' => 'Negage', 'slug' => 'negage'],
+            ['provincia_id' => 17, 'municipio' => 'Puri', 'slug' => 'puri'],
+            ['provincia_id' => 17, 'municipio' => 'Quimbele', 'slug' => 'quimbele'],
+            ['provincia_id' => 17, 'municipio' => 'Dange Quitexe', 'slug' => 'dange-quitexe'],
+            ['provincia_id' => 17, 'municipio' => 'Sanza Pombo', 'slug' => 'sanza-pombo'],
+            ['provincia_id' => 17, 'municipio' => 'Songo', 'slug' => 'songo'],
+            ['provincia_id' => 17, 'municipio' => 'Sacandica', 'slug' => 'sacandica'],
+            ['provincia_id' => 17, 'municipio' => 'Nsosso', 'slug' => 'nsosso'],
+            ['provincia_id' => 17, 'municipio' => 'Lucunga', 'slug' => 'lucunga'],
+            ['provincia_id' => 17, 'municipio' => 'Quipedro', 'slug' => 'quipedro'],
+            ['provincia_id' => 17, 'municipio' => 'Massau', 'slug' => 'massau'],
+            ['provincia_id' => 17, 'municipio' => 'Vista Alegre', 'slug' => 'vista-alegre'],
+            ['provincia_id' => 17, 'municipio' => 'Alto Zaza', 'slug' => 'alto-zaza'],
+            ['provincia_id' => 18, 'municipio' => 'Mbanza Kongo', 'slug' => 'mbanza-kongo'],
+            ['provincia_id' => 18, 'municipio' => 'Soyo', 'slug' => 'soyo'],
+            ['provincia_id' => 18, 'municipio' => 'Nzeto', 'slug' => 'nzeto'],
+            ['provincia_id' => 18, 'municipio' => 'Cuimba', 'slug' => 'cuimba'],
+            ['provincia_id' => 18, 'municipio' => 'Nóqui', 'slug' => 'noqui'],
+            ['provincia_id' => 18, 'municipio' => 'Tomboco', 'slug' => 'tomboco'],
+            ['provincia_id' => 18, 'municipio' => 'Luvo', 'slug' => 'luvo'],
+            ['provincia_id' => 18, 'municipio' => 'Lufico', 'slug' => 'lufico'],
+            ['provincia_id' => 18, 'municipio' => 'Quêlo', 'slug' => 'quelo'],
+            ['provincia_id' => 18, 'municipio' => 'Serra de Canda', 'slug' => 'serra-de-canda'],
+            ['provincia_id' => 18, 'municipio' => 'Quindeje', 'slug' => 'quindeje'],
+            ['provincia_id' => 19, 'municipio' => 'Cazombo', 'slug' => 'cazombo'],
+            ['provincia_id' => 19, 'municipio' => 'Luacano', 'slug' => 'luacano'],
+            ['provincia_id' => 19, 'municipio' => 'Cameia', 'slug' => 'cameia'],
+            ['provincia_id' => 19, 'municipio' => 'Luau', 'slug' => 'luau'],
+            ['provincia_id' => 19, 'municipio' => 'Nana Candundo', 'slug' => 'nana-candundo'],
+            ['provincia_id' => 19, 'municipio' => 'Macondo', 'slug' => 'macondo'],
+            ['provincia_id' => 19, 'municipio' => 'Caianda', 'slug' => 'caianda'],
+            ['provincia_id' => 19, 'municipio' => 'Lóvua do Zambeze', 'slug' => 'lovua-do-zambeze'],
+            ['provincia_id' => 19, 'municipio' => 'Lago Dilolo', 'slug' => 'lago-dilolo'],
+            ['provincia_id' => 20, 'municipio' => 'Cuito Cuanavale', 'slug' => 'cuito-cuanavale'],
+            ['provincia_id' => 20, 'municipio' => 'Dirico', 'slug' => 'dirico'],
+            ['provincia_id' => 20, 'municipio' => 'Mavinga', 'slug' => 'mavinga'],
+            ['provincia_id' => 20, 'municipio' => 'Rivungo', 'slug' => 'rivungo'],
+            ['provincia_id' => 20, 'municipio' => 'Xipundo', 'slug' => 'xipundo'],
+            ['provincia_id' => 20, 'municipio' => 'Dima', 'slug' => 'dima'],
+            ['provincia_id' => 20, 'municipio' => 'Luiana', 'slug' => 'luiana'],
+            ['provincia_id' => 20, 'municipio' => 'Mucusso', 'slug' => 'mucusso'],
+            ['provincia_id' => 20, 'municipio' => 'Luengue', 'slug' => 'luengue'],
+            ['provincia_id' => 21, 'municipio' => 'Catete', 'slug' => 'catete'],
+            ['provincia_id' => 21, 'municipio' => 'Quiçama', 'slug' => 'quicama'],
+            ['provincia_id' => 21, 'municipio' => 'Calumbo', 'slug' => 'calumbo'],
+            ['provincia_id' => 21, 'municipio' => 'Cabiri', 'slug' => 'cabiri'],
+            ['provincia_id' => 21, 'municipio' => 'Cabo Ledo', 'slug' => 'cabo-ledo'],
+            ['provincia_id' => 21, 'municipio' => 'Bom Jesus', 'slug' => 'bom-jesus'],
+            ['provincia_id' => 21, 'municipio' => 'Sequele', 'slug' => 'sequele'],
         ];
 
+
         foreach ($municipios as $municipio) {
-          Municipio::create([
-            'nome' => $municipio['municipio'],
-            'slug' => $municipio['slug'],
-            'provincia_id' => $municipio['provincia_id']
-          ]);
+            Municipio::create([
+                'nome' => $municipio['municipio'],
+                'slug' => $municipio['slug'],
+                'provincia_id' => $municipio['provincia_id']
+            ]);
         }
     }
 }

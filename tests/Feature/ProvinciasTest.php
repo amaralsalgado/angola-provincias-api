@@ -219,18 +219,6 @@ class ProvinciasTest extends TestCase
         $this->assertApiOkResponse($response, $expectedDataStructure);
     }
 
-    public function test_can_get_specific_distrito_from_municipio_of_provincia()
-    {
-        $response = $this->json('get', '/api/v1/provincias/luanda/municipios/cacuaco/distritos/kikolo');
-
-        $expectedDataStructure = [
-            'nome',
-            'slug',
-        ];
-
-        $this->assertApiOkResponse($response, $expectedDataStructure);
-    }
-
     public function test_cannot_get_non_existent_distrito_from_municipio_of_provincia()
     {
         $response =  $this->json('get', '/api/v1/provincias/luanda/municipios/cacuaco/distritos/non-existent-distrito');

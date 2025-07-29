@@ -35,14 +35,14 @@ class ProvinciaSeeder extends Seeder
             [
                 'nome' => 'Cabinda',
                 'extensao' => '7.283 km²',
-                'fundacao' => '1868-02-28',
+                'fundacao' => '1862-02-28',
                 'slug' => 'cabinda'
             ],
             [
-                'nome' => 'Cuando Cubango',
+                'nome' => 'Cubango',
                 'extensao' => '199.049 km²',
                 'fundacao' => '1961-10-21',
-                'slug' => 'cuando-cubango'
+                'slug' => 'cubango'
             ],
             [
                 'nome' => 'Cuanza Norte',
@@ -53,7 +53,7 @@ class ProvinciaSeeder extends Seeder
             [
                 'nome' => 'Cuanza Sul',
                 'extensao' => '55.660 km²',
-                'fundacao' => '1917-09-15',
+                'fundacao' => '1914-09-15',
                 'slug' => 'cuanza-sul'
             ],
             [
@@ -64,13 +64,13 @@ class ProvinciaSeeder extends Seeder
             ],
             [
                 'nome' => 'Huambo',
-                'extensao' => '2609',
+                'extensao' => '2.609 km²',
                 'fundacao' => '1912-08-08',
                 'slug' => 'huambo'
             ],
             [
                 'nome' => 'Huíla',
-                'extensao' => '79022',
+                'extensao' => '79.022 km²',
                 'fundacao' => '1901-09-02',
                 'slug' => 'huila'
             ],
@@ -106,7 +106,7 @@ class ProvinciaSeeder extends Seeder
             ],
             [
                 'nome' => 'Namibe',
-                'extensao' => '8916',
+                'extensao' => '8.916 km²',
                 'fundacao' => '1645-07-10',
                 'slug' => 'namibe'
             ],
@@ -118,9 +118,27 @@ class ProvinciaSeeder extends Seeder
             ],
             [
                 'nome' => 'Zaire',
-                'extensao' => '40130',
+                'extensao' => '40.130 km²',
                 'fundacao' => '1961-04-01',
                 'slug' => 'zaire'
+            ],
+            [
+                'nome' => 'Moxico Leste',
+                'extensao' => null,
+                'fundacao' => '2025-01-01',
+                'slug' => 'moxico-leste'
+            ],
+            [
+                'nome' => 'Cuando',
+                'extensao' => null,
+                'fundacao' => '2025-01-01',
+                'slug' => 'cuando'
+            ],
+            [
+                'nome' => 'Icolo e Bengo',
+                'extensao' => null,
+                'fundacao' => '2025-01-01',
+                'slug' => 'icolo-e-bengo'
             ]
         ];
 

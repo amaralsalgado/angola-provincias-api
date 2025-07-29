@@ -27,7 +27,7 @@ class EtniaProvinciaSeeder extends Seeder
             [
                 'provincia' => 'Bié',
                 'provincia_id' => 3,
-                'etnias' => [3,5],
+                'etnias' => [11],
             ],
             [
                 'provincia' => 'Cabinda',
@@ -35,7 +35,7 @@ class EtniaProvinciaSeeder extends Seeder
                 'etnias' => [2],
             ],
             [
-                'provincia' => 'Cuando Cubango',
+                'provincia' => 'Cubango',
                 'provincia_id' => 5,
                 'etnias' => [6],
             ],
@@ -103,6 +103,21 @@ class EtniaProvinciaSeeder extends Seeder
                 'provincia' => 'Zaire',
                 'provincia_id' => 18,
                 'etnias' => [2],
+            ],
+            [
+                'provincia' => 'Moxico Leste',
+                'provincia_id' => 19,
+                'etnias' => [],
+            ],
+            [
+                'provincia' => 'Cuando',
+                'provincia_id' => 20,
+                'etnias' => [6],
+            ],
+            [
+                'provincia' => 'Icolo e Bengo',
+                'provincia_id' => 21,
+                'etnias' => [1],
             ]
         ];
 

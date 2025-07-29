@@ -57,6 +57,10 @@ class LinguaSeeder extends Seeder
             [
                 'nome' => 'Oluherero',
                 'slug' => 'oluherero'
+            ],
+            [
+                'nome' => 'Português',
+                'slug' => 'portugues'
             ]
         ];
 

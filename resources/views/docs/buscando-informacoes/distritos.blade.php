@@ -52,23 +52,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso",
-            "data": [
-            {
-            "nome": "Catete",
-            "slug": "catete",
-            "municipio": {
-            "nome": "Icolo e Bengo",
-            "slug": "icolo-e-bengo",
-            "provincia": {
-            "nome": "Luanda",
-            "slug": "luanda",
-            "extensao": "18.826 km²",
-            "data_fundacao": "25-01-1576"
-            }
-            }
-            },
-            //...
-            ]
+            "data": []
             }
         </x-code>
     </x-docs.section.paragraph>
@@ -88,34 +72,6 @@
             As informações de cada distrito podem ser acessadas através de um <strong>slug</strong> exclusivo que identifica o distrito. O <strong>slug</strong> está disponível na resposta da requisição que lista todos os distritos. Quando você faz uma requisição por ex. <strong>GET /distritos</strong>, a API no índice "data" retorna um array de objetos, e cada objeto contém o slug correspondente ao distrito.
         </x-info>
 
-        <x-docs.section.paragraph>
-            <strong class="font-normal">Exemplo de consulta:</strong>
-
-            <x-code>
-                // GET {{config('app.api_base_url')}}/distritos/catete
-
-                {
-                "success": true,
-                "code": 200,
-                "message": "Sucesso",
-                "data": {
-                "nome": "Catete",
-                "slug": "catete",
-                "municipio": {
-                "nome": "Icolo e Bengo",
-                "slug": "icolo-e-bengo",
-                "provincia": {
-                "nome": "Luanda",
-                "slug": "luanda",
-                "extensao": "18.826 km²",
-                "data_fundacao": "25-01-1576"
-                }
-                }
-                }
-                }
-            </x-code>
-
-        </x-docs.section.paragraph>
     </x-docs.section.sub-section>
 
 </x-docs.section.section>
