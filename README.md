@@ -26,56 +26,48 @@ https://angolaprovinciasapi.ggwp.com.br/api/v1
 // GET https://angolaprovinciasapi.ggwp.com.br/api/v1/provincias
 
 {
-  "success": true,
-  "code": 200,
-  "message": "Sucesso",
-  "data": [
-    {
-      "nome": "Luanda",
-      "slug": "luanda",
-      "extensao": "18.826 km²",
-      "data_fundacao": "25-01-1576",
-      "capital": {
-        "nome": "Luanda",
-        "slug": "luanda"
-      },
-      "municipios": [
-        {
-          "nome": "Talatona",
-          "slug": "talatona",
-          "distritos": [
+    "success": true,
+    "code": 200,
+    "message": "Sucesso",
+    "data": {
+        "nome": "Uíge",
+        "slug": "uige",
+        "extensao": "58.698 km²",
+        "data_fundacao": "31-05-1887",
+        "capital": {
+            "nome": "Uíge",
+            "slug": "uige"
+        },
+        "municipios": [
             {
-              "nome": "Benfica",
-              "slug": "benfica"
-            }
-            // ...
-          ],
-          "comunas": [
+                "nome": "Maquela do Zombo",
+                "slug": "maquela-do-zombo",
+                "distritos": [],
+                "comunas": [
+                    {
+                        "nome": "Maquela do Zombo",
+                        "slug": "maquela-do-zombo"
+                    },
+                    //...
+                ]
+            },
+            //...
+        ],
+        "etnias": [
             {
-              "nome": "Mussulo",
-              "slug": "mussulo"
-            }
-            // ...
-          ]
-        }
-      ],
-      "etnias": [
-        {
-          "nome": "Ambundu",
-          "slug": "ambundu"
-        }
-        // ...
-      ],
-      "linguas": [
-        {
-          "nome": "Kimbundu",
-          "slug": "kimbundu"
-        }
-        // ...
-      ]
+                "nome": "Ambundu",
+                "slug": "ambundu"
+            },
+            //...
+        ],
+        "linguas": [
+            {
+                "nome": "Kikongo",
+                "slug": "kikongo"
+            },
+            //...
+        ]
     }
-    // ...
-  ]
 }
 
 ```
