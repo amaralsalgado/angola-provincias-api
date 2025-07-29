@@ -1,7 +1,7 @@
 @extends('docs.layout')
 @section('metaTitle', 'O país - Angola')
 @section('title')
-    <span class=" text-red-500">An</span><span class=" text-yellow-400">go</span><span
+Informações Gerais sobre <span class=" text-red-500">An</span><span class=" text-yellow-400">go</span><span
         class=" text-black dark:text-gray-600">la</span>
 @endsection
 @section('content')
@@ -33,7 +33,7 @@
     <x-docs.section.section title="Buscando informações gerais do páis" id="buscando-informacoes-gerais-do-pais">
 
         <x-docs.section.paragraph>
-            Este endpoint retorna as informações gerais sobre o país:
+            Este endpoint retorna estatísticas administrativas e dados oficiais da República de Angola, incluindo número total de províncias, municípios, comunas, moeda, fuso horário, entre outros:
             <x-code>
                 GET /angola
             </x-code>
