@@ -1,19 +1,29 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.4.20",
-        "axios": "^1.7.4",
-        "laravel-vite-plugin": "^1.0",
-        "postcss": "^8.4.45",
-        "tailwindcss": "^3.4.10",
-        "vite": "^5.0"
-    },
-    "dependencies": {
-        "highlight.js": "^11.10.0"
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.0",
+    "@commitlint/config-conventional": "^20.4.0",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "laravel-vite-plugin": "^1.0",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.0"
+  },
+  "dependencies": {
+    "highlight.js": "^11.10.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  }
 }
