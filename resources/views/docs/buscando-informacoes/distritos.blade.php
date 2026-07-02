@@ -29,7 +29,7 @@
 
 <x-docs.section.section title="Introdução" id="introducao">
     <x-docs.section.paragraph>
-        Todas as requisições à API começam com a seguinte URL base: <x-code>{{config('app.api_base_url')}}</x-code>
+        Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
     </x-docs.section.paragraph>
 </x-docs.section.section>
 
@@ -37,17 +37,13 @@
 
     <x-docs.section.paragraph>
         Este endpoint retorna as informações sobre todos os distritos do país:
-        <x-code>
-            GET /distritos
-        </x-code>
+        <x-code endpoint="/distritos"></x-code>
     </x-docs.section.paragraph>
 
     <x-docs.section.paragraph>
         <strong class="font-normal">Exemplo de consulta:</strong>
 
-        <x-code>
-            // GET {{route('api.v1.distritos')}}
-
+        <x-code :endpoint="route('api.v1.distritos')">
             {
             "success": true,
             "code": 200,
@@ -60,9 +56,7 @@
     <x-docs.section.sub-section title="Buscando um determinado distrito" id="buscando-um-determinado-distrito">
         <x-docs.section.paragraph>
             Para consultar um determinado distrito, utilize o seguinte endpoint:
-            <x-code>
-                GET /distritos/{slug}
-            </x-code>
+            <x-code endpoint="/distritos/{slug}"></x-code>
         </x-docs.section.paragraph>
 
         <x-info>

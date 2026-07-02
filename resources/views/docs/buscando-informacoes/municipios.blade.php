@@ -37,7 +37,7 @@
 
     <x-docs.section.section title="Introdução" id="introducao">
         <x-docs.section.paragraph>
-            Todas as requisições à API começam com a seguinte URL base: <x-code>{{ config('app.api_base_url') }}</x-code>
+            Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
         </x-docs.section.paragraph>
     </x-docs.section.section>
 
@@ -45,17 +45,13 @@
 
         <x-docs.section.paragraph>
             Este endpoint retorna as informações sobre todos os municípios do país:
-            <x-code>
-                GET /municipios
-            </x-code>
+            <x-code endpoint="/municipios"></x-code>
         </x-docs.section.paragraph>
 
         <x-docs.section.paragraph>
             <strong class="font-normal">Exemplo de consulta:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.municipios') }}
-
+            <x-code :endpoint="route('api.v1.municipios')">
                 {
                 "success": true,
                 "code": 200,
@@ -70,8 +66,7 @@
                 "extensao": "55.660 km²",
                 "data_fundacao": "15-09-1914"
                 }
-                },
-                //...
+                }
                 ]
                 }
             </x-code>
@@ -83,9 +78,7 @@
 
         <x-docs.section.paragraph>
             Este endpoint retorna as informações sobre um determinado município:
-            <x-code>
-                GET /municipios/{slug}
-            </x-code>
+            <x-code endpoint="/municipios/{slug}"></x-code>
         </x-docs.section.paragraph>
 
         <x-info>
@@ -101,9 +94,7 @@
         <x-docs.section.paragraph>
             <strong class="font-normal">Exemplo de consulta:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.municipios') }}/cacongo
-
+            <x-code :endpoint="route('api.v1.municipios') . '/cacongo'">
                 {
                 "success": true,
                 "code": 200,
@@ -122,12 +113,11 @@
             </x-code>
         </x-docs.section.paragraph>
 
-        <x-docs.section.sub-section title="Buscando os distritos de um município" id="buscando-os-distritos-de-um-municipio">
+        <x-docs.section.sub-section title="Buscando os distritos de um município"
+            id="buscando-os-distritos-de-um-municipio">
             <x-docs.section.paragraph>
                 Para consultar os distritos de um município, utilize o seguinte endpoint:
-                <x-code>
-                    GET /municipios/{slug}/distritos
-                </x-code>
+                <x-code endpoint="/municipios/{slug}/distritos"></x-code>
             </x-docs.section.paragraph>
 
             <x-info>
@@ -143,9 +133,7 @@
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/municipios/talatona/distritos
-
+                <x-code :endpoint="route('api.v1.municipio.distritos', 'talatona')">
                     {
                     "success": true,
                     "code": 200,
@@ -164,9 +152,7 @@
         <x-docs.section.sub-section title="Buscando as comunas de um muncípio" id="buscando-as-comunas-de-um-municipio">
             <x-docs.section.paragraph>
                 Para consultar as comunas de um município, utilize o seguinte endpoint:
-                <x-code>
-                    GET /municipios/{slug}/comunas
-                </x-code>
+                <x-code endpoint="/municipios/{slug}/comunas"></x-code>
             </x-docs.section.paragraph>
 
             <x-info>
@@ -182,9 +168,7 @@
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/municipios/kilamba-kiaxi/comunas
-
+                <x-code :endpoint="route('api.v1.municipios.comunas', 'kilamba-kiaxi')">
                     {
                     "success": true,
                     "code": 200,
@@ -193,7 +177,7 @@
                     {
                     "nome": "Golfe",
                     "slug": "golfe"
-                    },
+                    }
                     ]
                     }
                 </x-code>

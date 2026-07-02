@@ -62,16 +62,12 @@
             <x-docs.section.paragraph>
                 Exemplo de requisição bem sucedida:
 
-                <x-code>
-                    // GET {{route('api.v1.provincias')}}
-
+                <x-code :endpoint="route('api.v1.provincias')">
                     {
                     "success": true,
                     "code": 200,
                     "message": "Sucesso",
-                    "data": [
-                        //...
-                        ]
+                    "data": []
                     }
                 </x-code>
             </x-docs.section.paragraph>
@@ -82,9 +78,7 @@
             <x-docs.section.paragraph>
                 Exemplo de requisição de recurso inesistente:
 
-                <x-code>
-                    // GET {{route('api.v1.provincias')}}/new-york
-
+                <x-code :endpoint="route('api.v1.provincias.find', 'new-york')">
                     {
                     "success": false,
                     "code": 404,
@@ -100,9 +94,7 @@
             <x-docs.section.paragraph>
                 Exemplo de requisição com erro inesperado no servidor:
 
-                <x-code>
-                    // GET {{route('api.v1.provincias')}}
-
+                <x-code :endpoint="route('api.v1.provincias')">
                     {
                     "success": false,
                     "code": 500,

@@ -54,5 +54,7 @@ Route::prefix("v1")->group(function () {
 
         Route::get('/linguas', [LinguasController::class, 'getAll'])->name('linguas');;
         Route::get('/linguas/{lingua}', [LinguasController::class, 'find']);
+
+        //teste
     });
 });

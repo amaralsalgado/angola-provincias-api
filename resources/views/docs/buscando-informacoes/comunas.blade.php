@@ -26,7 +26,7 @@
 
     <x-docs.section.section title="Introdução" id="introducao">
         <x-docs.section.paragraph>
-            Todas as requisições à API começam com a seguinte URL base: <x-code>{{ config('app.api_base_url') }}</x-code>
+            Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
         </x-docs.section.paragraph>
     </x-docs.section.section>
 
@@ -34,17 +34,13 @@
 
         <x-docs.section.paragraph>
             Este endpoint retorna as informações sobre todas as comunas do país:
-            <x-code>
-                GET /comunas
-            </x-code>
+            <x-code endpoint="/comunas"></x-code>
         </x-docs.section.paragraph>
 
         <x-docs.section.paragraph>
             <strong class="font-normal">Exemplo de consulta:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.comunas') }}
-
+            <x-code :endpoint="route('api.v1.comunas')">
                 {
                 "success": true,
                 "code": 200,
@@ -63,8 +59,7 @@
                 "data_fundacao": "26-04-1980"
                 }
                 }
-                },
-                //...
+                }
                 ]
                 }
             </x-code>
@@ -73,9 +68,7 @@
         <x-docs.section.sub-section title="Buscando uma determinada comuna" id="buscando-uma-determinada-comuna">
             <x-docs.section.paragraph>
                 Para consultar uma determinada comuna, utilize o seguinte endpoint:
-                <x-code>
-                    GET /comunas/{slug}
-                </x-code>
+                <x-code endpoint="/comunas/{slug}"></x-code>
             </x-docs.section.paragraph>
 
             <x-info>
@@ -91,9 +84,7 @@
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/comunas/bela-vista
-
+                <x-code :endpoint="config('app.api_base_url') . '/comunas/bela-vista'">
                     {
                     "success": true,
                     "code": 200,

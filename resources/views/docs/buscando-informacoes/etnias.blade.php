@@ -29,7 +29,7 @@
 
     <x-docs.section.section title="Introdução" id="introducao">
         <x-docs.section.paragraph>
-            Todas as requisições à API começam com a seguinte URL base: <x-code>{{ config('app.api_base_url') }}</x-code>
+            Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
         </x-docs.section.paragraph>
     </x-docs.section.section>
 
@@ -37,17 +37,13 @@
 
         <x-docs.section.paragraph>
             Este endpoint retorna as informações sobre todas as etnias do país:
-            <x-code>
-                GET /etnias
-            </x-code>
+            <x-code endpoint="/etnias"></x-code>
         </x-docs.section.paragraph>
 
         <x-docs.section.paragraph>
             <strong class="font-normal">Exemplo de consulta:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.etnias') }}
-
+            <x-code :endpoint="route('api.v1.etnias')">
                 {
                 "success": true,
                 "code": 200,
@@ -62,11 +58,9 @@
                 "slug": "bengo",
                 "extensao": "31.371 km²",
                 "data_fundacao": "26-04-1980"
-                },
-                //...
+                }
                 ]
-                },
-                //...
+                }
                 ]
                 }
             </x-code>
@@ -75,9 +69,7 @@
         <x-docs.section.sub-section title="Buscando uma determinada etnia" id="buscando-uma-determinada-etnia">
             <x-docs.section.paragraph>
                 Para consultar uma determinada etnia, utilize o seguinte endpoint:
-                <x-code>
-                    GET /etnias/{slug}
-                </x-code>
+                <x-code endpoint="/etnias/{slug}"></x-code>
             </x-docs.section.paragraph>
 
             <x-info>
@@ -93,9 +85,7 @@
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/etnias/ambundu
-
+                <x-code :endpoint="config('app.api_base_url') . '/etnias/ambundu'">
                     {
                     "success": true,
                     "code": 200,
@@ -109,8 +99,7 @@
                     "slug": "bengo",
                     "extensao": "31.371 km²",
                     "data_fundacao": "26-04-1980"
-                    },
-                    //...
+                    }
                     ]
                     }
                     }

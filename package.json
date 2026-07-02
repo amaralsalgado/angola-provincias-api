@@ -19,7 +19,7 @@
     "vite": "^5.0"
   },
   "dependencies": {
-    "highlight.js": "^11.10.0"
+    "@andypf/json-viewer": "^2.8.0"
   },
   "config": {
     "commitizen": {

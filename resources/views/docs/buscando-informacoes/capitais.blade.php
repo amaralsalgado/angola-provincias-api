@@ -27,7 +27,7 @@
 
     <x-docs.section.section title="Introdução" id="introducao">
         <x-docs.section.paragraph>
-            Todas as requisições à API começam com a seguinte URL base: <x-code>{{ config('app.api_base_url') }}</x-code>
+            Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
         </x-docs.section.paragraph>
     </x-docs.section.section>
 
@@ -35,17 +35,13 @@
 
         <x-docs.section.paragraph>
             Este endpoint retorna as informações sobre todas as capitais do país:
-            <x-code>
-                GET /capitais
-            </x-code>
+            <x-code endpoint="/capitais"></x-code>
         </x-docs.section.paragraph>
 
         <x-docs.section.paragraph>
             <strong class="font-normal">Exemplo de consulta:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.capitais') }}
-
+            <x-code :endpoint="route('api.v1.capitais')">
                 {
                 "success": true,
                 "code": 200,
@@ -60,8 +56,7 @@
                 "extensao": "18.826 km²",
                 "data_fundacao": "25-01-1576"
                 }
-                },
-                //...
+                }
                 ]
                 }
             </x-code>
@@ -70,9 +65,7 @@
         <x-docs.section.sub-section title="Buscando uma determinada capital" id="buscando-uma-determinada-capital">
             <x-docs.section.paragraph>
                 Para consultar uma determinada capital, utilize o seguinte endpoint:
-                <x-code>
-                    GET /capitais/{slug}
-                </x-code>
+                <x-code endpoint="/capitais/{slug}"></x-code>
             </x-docs.section.paragraph>
 
             <x-info>
@@ -88,9 +81,7 @@
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/capitais/ingombota
-
+                <x-code :endpoint="route('api.v1.capitais.find', 'ingombota')">
                     {
                     "success": true,
                     "code": 200,
