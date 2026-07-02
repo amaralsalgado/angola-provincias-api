@@ -49,7 +49,7 @@
 
     <x-docs.section.section title="Introdução" id="introducao">
         <x-docs.section.paragraph>
-            Todas as requisições à API começam com a seguinte URL base: <x-code>{{ config('app.api_base_url') }}</x-code>
+            Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
         </x-docs.section.paragraph>
     </x-docs.section.section>
 
@@ -57,17 +57,13 @@
 
         <x-docs.section.paragraph>
             Este endpoint retorna as informações sobre todas as províncias:
-            <x-code>
-                GET /provincias
-            </x-code>
+            <x-code endpoint="/provincias"></x-code>
         </x-docs.section.paragraph>
 
         <x-docs.section.paragraph>
             <strong class="font-normal">Exemplo de consulta:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.provincias') }}
-
+            <x-code :endpoint="route('api.v1.provincias')">
                 {
                 "success": true,
                 "code": 200,
@@ -91,11 +87,9 @@
                 {
                 "nome": "Benfica",
                 "slug": "benfica"
-                },
-                //...
+                }
                 ]
-                },
-                //...
+                }
                 ],
                 "etnias": [
                 {
@@ -107,11 +101,9 @@
                 {
                 "nome": "Kimbundu",
                 "slug": "kimbundu"
-                },
-                //...
+                }
                 ]
-                },
-                //...
+                }
                 ]
                 }
             </x-code>
@@ -124,9 +116,7 @@
 
         <x-docs.section.paragraph>
             Este endpoint retorna as informações sobre uma determinada província:
-            <x-code>
-                GET /provincias/{slug}
-            </x-code>
+            <x-code endpoint="/provincias/{slug}"></x-code>
         </x-docs.section.paragraph>
 
         <x-info>
@@ -142,9 +132,7 @@
         <x-docs.section.paragraph>
             <strong class="font-normal">Segue como exemplo de consulta, buscando informações da província do Uíge:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.provincias') }}/uige
-
+            <x-code :endpoint="route('api.v1.provincias.find', 'uige')">
                 {
                 "success": true,
                 "code": 200,
@@ -167,25 +155,21 @@
                 {
                 "nome": "Maquela do Zombo",
                 "slug": "maquela-do-zombo"
-                },
-                //...
+                }
                 ]
-                },
-                //...
+                }
                 ],
                 "etnias": [
                 {
                 "nome": "Ambundu",
                 "slug": "ambundu"
-                },
-                //...
+                }
                 ],
                 "linguas": [
                 {
                 "nome": "Kikongo",
                 "slug": "kikongo"
-                },
-                //...
+                }
                 ]
                 }
                 }
@@ -209,17 +193,13 @@
         <x-docs.section.sub-section title="Capital" id="capital">
             <x-docs.section.paragraph>
                 Para consultar a capital de uma província específica, utilize o seguinte endpoint:
-                <x-code>
-                    GET /provincias/{slug}/capital
-                </x-code>
+                <x-code endpoint="/provincias/{slug}/capital"></x-code>
             </x-docs.section.paragraph>
 
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/provincias/bengo/capital
-
+                <x-code :endpoint="route('api.v1.provincias.capital', 'bengo')">
                     {
                     "success": true,
                     "code": 200,
@@ -241,17 +221,13 @@
         <x-docs.section.sub-section title="Municípios" id="municipios">
             <x-docs.section.paragraph>
                 Para consultar os municípios de uma província, utilize o seguinte endpoint:
-                <x-code>
-                    GET /provincias/{slug}/municipios
-                </x-code>
+                <x-code endpoint="/provincias/{slug}/municipios"></x-code>
             </x-docs.section.paragraph>
 
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/provincias/bengo/municipios
-
+                <x-code :endpoint="config('app.api_base_url') . '/provincias/bengo/municipios'">
                     {
                     "success": true,
                     "code": 200,
@@ -260,8 +236,7 @@
                     {
                     "nome": "Ambriz",
                     "slug": "ambriz"
-                    },
-                    //...
+                    }
                     ]
                     }
                 </x-code>
@@ -276,17 +251,13 @@
         <x-docs.section.sub-section title="Línguas" id="linguas">
             <x-docs.section.paragraph>
                 Para consultar as línguas faladas de uma província, utilize o seguinte endpoint:
-                <x-code>
-                    GET /provincias/{slug}/linguas
-                </x-code>
+                <x-code endpoint="/provincias/{slug}/linguas"></x-code>
             </x-docs.section.paragraph>
 
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/provincias/lunda-norte/linguas
-
+                <x-code :endpoint="config('app.api_base_url') . '/provincias/lunda-norte/linguas'">
                     {
                     "success": true,
                     "code": 200,
@@ -310,17 +281,13 @@
         <x-docs.section.sub-section title="Etnias" id="etnias">
             <x-docs.section.paragraph>
                 Para consultar as etnias presentes em uma província, utilize o seguinte endpoint:
-                <x-code>
-                    GET /provincias/{slug}/etnias
-                </x-code>
+                <x-code endpoint="/provincias/{slug}/etnias"></x-code>
             </x-docs.section.paragraph>
 
             <x-docs.section.paragraph>
                 <strong class="font-normal">Exemplo de consulta:</strong>
 
-                <x-code>
-                    // GET {{ config('app.api_base_url') }}/provincias/zaire/etnias
-
+                <x-code :endpoint="config('app.api_base_url') . '/provincias/zaire/etnias'">
                     {
                     "success": true,
                     "code": 200,

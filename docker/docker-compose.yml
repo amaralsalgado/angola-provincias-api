@@ -3,7 +3,6 @@ services:
         build:
             context: ./
             dockerfile: Dockerfile
-        container_name: angola_provinces_api
         volumes:
             - ./..:/var/www
         ports:
@@ -14,7 +13,6 @@ services:
 
     db:
         image: mariadb
-        container_name: mariadb_db
         restart: always
         environment:
             MARIADB_DATABASE: angola_provinces_api
@@ -26,7 +24,6 @@ services:
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
-        container_name: phpmyadmin
         restart: always
         ports:
             - "8080:80"
@@ -36,7 +33,6 @@ services:
 
     nginx:
         image: nginx:latest
-        container_name: nginx
         restart: always
         volumes:
             - ./../:/var/www

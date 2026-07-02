@@ -1,7 +1,7 @@
 @extends('docs.layout')
 @section('metaTitle', 'O país - Angola')
 @section('title')
-Informações Gerais sobre <span class=" text-red-500">An</span><span class=" text-yellow-400">go</span><span
+    Informações Gerais sobre <span class=" text-red-500">An</span><span class=" text-yellow-400">go</span><span
         class=" text-black dark:text-gray-600">la</span>
 @endsection
 @section('content')
@@ -26,25 +26,22 @@ Informações Gerais sobre <span class=" text-red-500">An</span><span class=" te
 
     <x-docs.section.section title="Introdução" id="introducao">
         <x-docs.section.paragraph>
-            Todas as requisições à API começam com a seguinte URL base: <x-code>{{ config('app.api_base_url') }}</x-code>
+            Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
         </x-docs.section.paragraph>
     </x-docs.section.section>
 
     <x-docs.section.section title="Buscando informações gerais do páis" id="buscando-informacoes-gerais-do-pais">
 
         <x-docs.section.paragraph>
-            Este endpoint retorna estatísticas administrativas e dados oficiais da República de Angola, incluindo número total de províncias, municípios, comunas, moeda, fuso horário, entre outros:
-            <x-code>
-                GET /angola
-            </x-code>
+            Este endpoint retorna estatísticas administrativas e dados oficiais da República de Angola, incluindo número
+            total de províncias, municípios, comunas, moeda, fuso horário, entre outros:
+            <x-code endpoint="/angola"></x-code>
         </x-docs.section.paragraph>
 
         <x-docs.section.paragraph>
             <strong class="font-normal">Exemplo de consulta:</strong>
 
-            <x-code>
-                // GET {{ route('api.v1.angola') }}
-
+            <x-code :endpoint="route('api.v1.angola')">
                 {
                 "success": true,
                 "code": 200,

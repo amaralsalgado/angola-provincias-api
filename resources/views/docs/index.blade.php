@@ -126,7 +126,7 @@
     <x-docs.section.section title="Base URL" id="base-url">
 
         <x-docs.section.paragraph>
-            Todas as requisições à API começam com a seguinte URL base: <x-code>{{ config('app.api_base_url') }}</x-code>
+            Todas as requisições à API começam com a seguinte URL base: <x-code :endpoint="config('app.api_base_url')" method=""></x-code>
         </x-docs.section.paragraph>
     </x-docs.section.section>
 @endsection
