@@ -18,7 +18,7 @@ services:
             MARIADB_DATABASE: angola_provinces_api
             MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
         ports:
-            - "3306:3306"
+            - "3307:3306"
         volumes:
             - db_data:/var/lib/mysql
 

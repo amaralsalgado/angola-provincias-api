@@ -12,6 +12,10 @@
                 'name' => 'Visão geral',
                 'archor' => 'visao-geral',
             ],
+            [
+                'name' => 'Limite de requisições',
+                'archor' => 'limite-de-requisicoes',
+            ],
         ]"></x-docs.page-menu-archor.menu>
 
     </div>
@@ -42,5 +46,39 @@
             </ul>
         </x-docs.section.paragraph>
 
+    </x-docs.section.section>
+
+    <x-docs.section.section title="Limite de requisições" id="limite-de-requisicoes">
+        <x-docs.section.paragraph>
+            Para garantir a disponibilidade da API para todos os utilizadores, cada endereço IP está limitado a
+            <strong class="font-medium">60 requisições por minuto</strong>. Ao exceder este limite, a API responde com o
+            código <strong class="font-medium">429 Too Many Requests</strong>.
+
+            <x-code :endpoint="route('api.v1.provincias')">
+                {
+                "success": false,
+                "code": 429,
+                "message": "Demasiados pedidos. Tente novamente mais tarde.",
+                "data": []
+                }
+            </x-code>
+
+            Toda resposta inclui ainda os seguintes cabeçalhos, que permitem acompanhar o estado do limite:
+
+            <ul class="list-disc text-[#565454] dark:text-zinc-300">
+                <li class="ml-10 mt-3">
+                    <strong class="font-medium">X-RateLimit-Limit</strong>: número máximo de requisições permitidas por
+                    minuto.
+                </li>
+                <li class="ml-10">
+                    <strong class="font-medium">X-RateLimit-Remaining</strong>: número de requisições restantes na janela
+                    atual.
+                </li>
+                <li class="ml-10">
+                    <strong class="font-medium">Retry-After</strong>: presente apenas na resposta 429, indica em quantos
+                    segundos uma nova requisição pode ser feita.
+                </li>
+            </ul>
+        </x-docs.section.paragraph>
     </x-docs.section.section>
 @endsection
