@@ -7,10 +7,10 @@
     <meta name="description"
         content="API responsável por fornecer dados centralizados e acessíveis sobre as províncias de Angola">
     <meta name="theme-color" content="#fff">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('/images/favicon/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('/images/favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/images/favicon/favicon-16x16.png')}}">
-    <link rel="manifest" href="{{asset('/manifest.json')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/images/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="Angola API, API provincias de Angola, Angola, Api, provincias Angola">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -26,8 +26,8 @@
     <main class="grid grid-cols-[1fr] grid-rows-[60px_1fr] lg:grid-cols-[320px_1fr] h-[100vh]" id="main">
 
         <header
-            class="p-[10px_20px] z-10 bg-white sticky top-0 border-b-[1px] border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 col-start-1 col-end-3 grid-cols-[1fr_30px_60px] lg:grid-cols-[1fr_30px_80px] grid items-center justify-between">
-            <div class="flex items-center ">
+            class="p-[10px_20px] z-10 bg-white sticky top-0 border-b-[1px] border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 col-start-1 col-end-3 grid-cols-[minmax(0,1fr)_auto_34px] sm:grid-cols-[minmax(0,1fr)_auto_24px_34px] gap-2 sm:gap-3 grid items-center justify-between">
+            <div class="flex items-center min-w-0">
 
                 <button
                     class="text-2xl h-[40px] w-[40px] dark:active:dark:bg-zinc-800 dark:bg-transparent bg-zinc-100 p-[20px] rounded-full lg:hidden flex items-center justify-center"
@@ -35,18 +35,46 @@
                     <i class=" mdi mdi-menu"></i>
                 </button>
 
-                <h1 class="font-semibold ml-1 text-[16px] lg:text-[20px] lg:ml-0"><x-api-name></x-api-name></h1>
+                <h1 class="font-semibold ml-1 text-[14px] leading-tight sm:text-[16px] lg:text-[20px] lg:ml-0"><x-api-name></x-api-name></h1>
+
+            </div>
+
+
+            <div class="flex justify-end">
+
+                <select aria-label="Versão da API" title="Versão da documentação"
+                    onchange="window.location.href = this.value"
+                    class="bg-transparent border border-transparent focus:border-blue-500 focus:outline-none text-sm px-2 py-1 cursor-pointer">
+                    @foreach (['1.x', '2.x'] as $version)
+                        <option value="{{ route(Route::currentRouteName(), ['version' => $version]) }}"
+                            class="bg-white text-black" @selected($docsVersion === $version)>
+                            Versão {{ $version }}
+                        </option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="flex justify-end">
-                <a href="{{config('app.github_repository')}}" target="_blank">
-                    <img src="{{asset('images/github-mark.png')}}" alt="GitHub">
+                <label
+                    class="group relative flex items-center justify-center w-[40px] h-[34px] rounded-lg bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 p-1 hover:bg-zinc-100 dark:hover:bg-zinc-700 cursor-pointer">
+
+                    <input type="checkbox" name="theme" id="btn-theme" class="sr-only" aria-label="Alternar tema">
+
+                    <i class="mdi mdi-white-balance-sunny text-xl dark:hidden"></i>
+                    <i class="mdi mdi-weather-night text-xl hidden dark:block"></i>
+
+                    <span role="tooltip"
+                        class="pointer-events-none absolute right-0 top-full mt-2 z-20 whitespace-nowrap rounded-md bg-zinc-900 px-3 py-1.5 text-sm text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-zinc-100 dark:text-zinc-900">
+                        <span class="dark:hidden">Mudar para o modo escuro</span>
+                        <span class="hidden dark:inline">Mudar para o modo claro</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="hidden sm:flex justify-end">
+                <a href="{{ config('app.github_repository') }}" target="_blank">
+                    <img src="{{ asset('images/github-mark.png') }}" alt="GitHub" class="w-6 h-6">
                 </a>
-            </div>
-
-            <div class="flex justify-end">
-                <input type="checkbox" title="Tema" name="theme" id="btn-theme"
-                    class="w-[50px] h-[25px] lg:w-[60px] lg:h-[30px] bg-zinc-100 appearance-none rounded-full relative before:content-[''] before:absolute before:left-[0px] before:top-[50%] before:translate-y-[-50%] before:w-[28px] before:h-[28px] before:bg-[url(../images/sun.png)] before:bg-no-repeat before:bg-[0_0] before:bg-[length:100%] before:rounded-full lg:checked:before:left-[calc(100%_-_30px)] checked:before:left-[calc(100%_-_28px)] checked:bg-zinc-700 checked:before:bg-[url(../images/moon.png)] before:transition-[left_1s] cursor-pointer ">
             </div>
 
         </header>

@@ -4,6 +4,7 @@ return [
 
     'name' => env('APP_NAME', 'API Províncias de Angola'),
     'api_base_url' => env('API_BASE_URL', 'http://localhost/angola-provinces-api/api/v1'),
+    'api_base_url_v2' => env('API_BASE_URL_V2', preg_replace('#/v1$#', '/v2', env('API_BASE_URL', 'http://localhost/angola-provinces-api/api/v1'))),
     'github_repository' => env('APP_GITHUB_REPOSITORY', 'https://github.com/amaralsalgado/angola-provincias-api'),
 
     /*

@@ -1,12 +1,19 @@
 <?php
 
+use App\Http\Middleware\SetDocsVersion;
 use Illuminate\Support\Facades\Route;
 
 
 
-Route::redirect('/', '/docs');
+$docsVersions = ['1.x', '2.x'];
+$latestDocsVersion = end($docsVersions);
 
-Route::prefix('docs')->group(function () {
+Route::redirect('/', "/docs/{$latestDocsVersion}");
+
+// /docs opens the latest version of the docs
+Route::redirect('/docs', "/docs/{$latestDocsVersion}");
+
+Route::prefix('docs/{version}')->whereIn('version', $docsVersions)->middleware(SetDocsVersion::class)->group(function () {
 
     //INTRODUÇÃO
     Route::name('docs.')->group(function () {
@@ -17,56 +24,56 @@ Route::prefix('docs')->group(function () {
         //BUSCANDO INFORMAÇÕES
 
          Route::get('/angola', function () {
-            return view('docs.buscando-informacoes.angola');
+            return view('docs.endpoints.angola');
         })->name('angola');
 
         Route::get('/provincias', function () {
-            return view('docs.buscando-informacoes.provincias');
+            return view('docs.endpoints.provinces');
         })->name('provincias');
 
         Route::get('/capitais', function () {
-            return view('docs.buscando-informacoes.capitais');
+            return view('docs.endpoints.capitals');
         })->name('capitais');
 
         Route::get('/municipios', function () {
-            return view('docs.buscando-informacoes.municipios');
+            return view('docs.endpoints.municipalities');
         })->name('municipios');
 
         Route::get('/comunas', function () {
-            return view('docs.buscando-informacoes.comunas');
+            return view('docs.endpoints.communes');
         })->name('comunas');
 
         Route::get('/distritos', function () {
-            return view('docs.buscando-informacoes.distritos');
+            return view('docs.endpoints.districts');
         })->name('distritos');
 
         Route::get('/etnias', function () {
-            return view('docs.buscando-informacoes.etnias');
+            return view('docs.endpoints.ethnic-groups');
         })->name('etnias');
 
         Route::get('/linguas', function () {
-            return view('docs.buscando-informacoes.linguas');
+            return view('docs.endpoints.languages');
         })->name('linguas');
 
 
         //TRATAMENTO DE ERROS
 
         Route::get('/tratamento-de-erros', function () {
-            return view('docs.tratamento-de-erros.index');
+            return view('docs.error-handling.index');
         })->name('tratamento_de_erros');
 
 
         //LIMITES E RESTRIÇÕES
 
         Route::get('/limites', function () {
-            return view('docs.limites-e-restricoes.index');
+            return view('docs.limits-and-restrictions.index');
         })->name('limites');
 
 
         //VERSIONAMENTO
 
         Route::get('/versionamento', function () {
-            return view('docs.versionamento.index');
+            return view('docs.versioning.index');
         })->name('versionamento');
     });
 });
