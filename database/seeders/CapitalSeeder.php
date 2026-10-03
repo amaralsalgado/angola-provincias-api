@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Capital;
-use App\Models\Comuna;
-use App\Models\Distrito;
-use App\Models\Municipio;
+use App\Models\Commune;
+use App\Models\District;
+use App\Models\Municipality;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,140 +17,140 @@ class CapitalSeeder extends Seeder
     public function run(): void
     {
 
-        $capitais = [
+        $capitals = [
             [
-                'provincia_id' => 1,
-                'nome' => 'Dande',
+                'province_id' => 1,
+                'name' => 'Dande',
                 'slug' => 'dande'
             ],
             [
-                'provincia_id' => 2,
-                'nome' => 'Benguela',
+                'province_id' => 2,
+                'name' => 'Benguela',
                 'slug' => 'benguela'
             ],
             [
-                'provincia_id' => 3,
-                'nome' => 'Cuito',
+                'province_id' => 3,
+                'name' => 'Cuito',
                 'slug' => 'cuito'
             ],
             [
-                'provincia_id' => 4,
-                'nome' => 'Cabinda',
+                'province_id' => 4,
+                'name' => 'Cabinda',
                 'slug' => 'cabinda'
             ],
             [
-                'provincia_id' => 5,
-                'nome' => 'Menongue',
+                'province_id' => 5,
+                'name' => 'Menongue',
                 'slug' => 'menongue'
             ],
             [
-                'provincia_id' => 6,
-                'nome' => 'Cazengo',
+                'province_id' => 6,
+                'name' => 'Cazengo',
                 'slug' => 'cazengo'
             ],
             [
-                'provincia_id' => 7,
-                'nome' => 'Sumbe',
+                'province_id' => 7,
+                'name' => 'Sumbe',
                 'slug' => 'sumbe'
             ],
             [
-                'provincia_id' => 8,
-                'nome' => 'Cuanhama',
+                'province_id' => 8,
+                'name' => 'Cuanhama',
                 'slug' => 'cuanhama'
             ],
             [
-                'provincia_id' => 9,
-                'nome' => 'Huambo',
+                'province_id' => 9,
+                'name' => 'Huambo',
                 'slug' => 'huambo'
             ],
             [
-                'provincia_id' => 10,
-                'nome' => 'Lubango',
+                'province_id' => 10,
+                'name' => 'Lubango',
                 'slug' => 'lubango'
             ],
             [
-                'provincia_id' => 11,
-                'nome' => 'Ingombota',
+                'province_id' => 11,
+                'name' => 'Ingombota',
                 'slug' => 'ingombota'
             ],
             [
-                'provincia_id' => 12,
-                'nome' => 'Dundo',
+                'province_id' => 12,
+                'name' => 'Dundo',
                 'slug' => 'dundo'
             ],
             [
-                'provincia_id' => 13,
-                'nome' => 'Saurimo', //(antiga) ainda não definida
+                'province_id' => 13,
+                'name' => 'Saurimo', //(antiga) ainda não definida
                 'slug' => 'saurimo'
             ],
             [
-                'provincia_id' => 14,
-                'nome' => 'Malanje',
+                'province_id' => 14,
+                'name' => 'Malanje',
                 'slug' => 'malanje'
             ],
             [
-                'provincia_id' => 15,
-                'nome' => 'Luena',
+                'province_id' => 15,
+                'name' => 'Luena',
                 'slug' => 'luena'
             ],
             [
-                'provincia_id' => 16,
-                'nome' => 'Moçâmedes', //(antiga) ainda não definida
+                'province_id' => 16,
+                'name' => 'Moçâmedes', //(antiga) ainda não definida
                 'slug' => 'mocamedes'
             ],
             [
-                'provincia_id' => 17,
-                'nome' => 'Uíge',
+                'province_id' => 17,
+                'name' => 'Uíge',
                 'slug' => 'uige'
             ],
             [
-                'provincia_id' => 18,
-                'nome' => 'Mbanza Kongo',
+                'province_id' => 18,
+                'name' => 'Mbanza Kongo',
                 'slug' => 'mbanza-kongo'
             ],
             [
-                'provincia_id' => 19,
-                'nome' => 'Cazombo',
+                'province_id' => 19,
+                'name' => 'Cazombo',
                 'slug' => 'cazombo'
             ],
             [
-                'provincia_id' => 20,
-                'nome' => 'Mavinga',
+                'province_id' => 20,
+                'name' => 'Mavinga',
                 'slug' => 'mavinga'
             ],
             [
-                'provincia_id' => 21,
-                'nome' => 'Catete',
+                'province_id' => 21,
+                'name' => 'Catete',
                 'slug' => 'catete'
             ]
         ];
 
 
-        foreach ($capitais as $capital) {
+        foreach ($capitals as $capital) {
 
             $capitalType = null;
-            $capitalId = Municipio::where('slug', $capital['slug'])->first()?->id;
+            $capitalId = Municipality::where('slug', $capital['slug'])->first()?->id;
 
             if ($capitalId) {
-                $capitalType = Municipio::class;
+                $capitalType = Municipality::class;
             }
 
             if (!$capitalId) {
-                $capitalId = Comuna::where('slug', $capital['slug'])->first()?->id;
-                $capitalType = Comuna::class;
+                $capitalId = Commune::where('slug', $capital['slug'])->first()?->id;
+                $capitalType = Commune::class;
             }
 
             if (!$capitalId) {
-                $capitalId = Distrito::where('slug', $capital['slug'])->first()?->id;
-                $capitalType = Distrito::class;
+                $capitalId = District::where('slug', $capital['slug'])->first()?->id;
+                $capitalType = District::class;
             }
 
             if (!$capitalId) {
-                throw new \Exception("Capital ".$capital['nome']." was not found");
+                throw new \Exception("Capital ".$capital['name']." was not found");
             }
 
             Capital::create([
-                'provincia_id' => $capital['provincia_id'],
+                'province_id' => $capital['province_id'],
                 'capitalable_id' => $capitalId,
                 'capitalable_type' => $capitalType
             ]);

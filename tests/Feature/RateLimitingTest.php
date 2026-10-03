@@ -60,4 +60,21 @@ class RateLimitingTest extends TestCase
             ->assertOk()
             ->assertHeader('X-RateLimit-Remaining', self::LIMIT - 1);
     }
+
+    public function test_limit_is_shared_between_versions_and_message_follows_the_requested_version()
+    {
+        $ip = '10.0.0.5';
+
+        for ($i = 0; $i < self::LIMIT; $i++) {
+            $this->requestFrom($ip)->assertOk();
+        }
+
+        $this->withServerVariables(['REMOTE_ADDR' => $ip])->getJson('/api/v2/angola')
+            ->assertStatus(Response::HTTP_TOO_MANY_REQUESTS)
+            ->assertJson(['message' => 'Too many requests. Please try again later.']);
+
+        $this->requestFrom($ip)
+            ->assertStatus(Response::HTTP_TOO_MANY_REQUESTS)
+            ->assertJson(['message' => 'Demasiados pedidos. Tente novamente mais tarde.']);
+    }
 }

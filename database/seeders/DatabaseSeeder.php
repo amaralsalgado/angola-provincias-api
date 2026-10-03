@@ -7,13 +7,13 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 
 use Database\Seeders\CapitalSeeder;
-use Database\Seeders\ProvinciaSeeder;
-use Database\Seeders\LinguaSeeder;
-use Database\Seeders\EtniaSeeder;
-use Database\Seeders\DistritoSeeder;
-use Database\Seeders\ComunaSeeder;
-use Database\Seeders\EtniaProvinciaSeeder;
-use Database\Seeders\LinguaProvinciaSeeder;
+use Database\Seeders\ProvinceSeeder;
+use Database\Seeders\LanguageSeeder;
+use Database\Seeders\EthnicGroupSeeder;
+use Database\Seeders\DistrictSeeder;
+use Database\Seeders\CommuneSeeder;
+use Database\Seeders\EthnicGroupProvinceSeeder;
+use Database\Seeders\LanguageProvinceSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,15 +24,15 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call([
-            ProvinciaSeeder::class,
-            MunicipioSeeder::class,
-            ComunaSeeder::class,
-            DistritoSeeder::class,
+            ProvinceSeeder::class,
+            MunicipalitySeeder::class,
+            CommuneSeeder::class,
+            DistrictSeeder::class,
             CapitalSeeder::class,
-            LinguaSeeder::class,
-            EtniaSeeder::class,
-            EtniaProvinciaSeeder::class,
-            LinguaProvinciaSeeder::class,
+            LanguageSeeder::class,
+            EthnicGroupSeeder::class,
+            EthnicGroupProvinceSeeder::class,
+            LanguageProvinceSeeder::class,
         ]);
 
         // User::factory(10)->create();

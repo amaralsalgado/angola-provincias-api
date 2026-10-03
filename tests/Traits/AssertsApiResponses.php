@@ -6,8 +6,14 @@ use Illuminate\Testing\TestResponse;
 trait AssertsApiResponses
 {
 
-    public function assertApiOkResponse(TestResponse $response, array $dataStructure, string $message = 'Sucesso')
+    protected function successMessage(): string
     {
+        return 'Sucesso';
+    }
+
+    public function assertApiOkResponse(TestResponse $response, array $dataStructure, ?string $message = null)
+    {
+        $message ??= $this->successMessage();
 
         $response->assertStatus(Response::HTTP_OK)->assertJsonStructure([
             'data' => $dataStructure

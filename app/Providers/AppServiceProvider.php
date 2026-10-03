@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Support\ApiResponse;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -24,12 +25,9 @@ class AppServiceProvider extends ServiceProvider
     {
         RateLimiter::for('api', function ($request) {
             return Limit::perMinute(60)->by($request->ip())->response(function (Request $request, array $headers) {
-                return response()->json([
-                    'success' => false,
-                    'code' => 429,
-                    'message' => 'Demasiados pedidos. Tente novamente mais tarde.',
-                    'data' => [],
-                ], 429, $headers);
+                $response = ApiResponse::error(__('api.too_many_requests'), 429);
+
+                return $response->withHeaders($headers);
             });
         });
     }
