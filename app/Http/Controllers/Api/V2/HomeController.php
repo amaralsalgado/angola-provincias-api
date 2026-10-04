@@ -12,19 +12,8 @@ class HomeController extends Controller
 
     public function index(): JsonResponse
     {
-        $totals = $this->angola->totals();
+        $data = $this->angola->info();
 
-        return $this->successResponse([
-            'name' => 'Republic of Angola',
-            'continent' => 'Africa',
-            'area' => '1,246,700 km²',
-            'main_capital' => 'Luanda',
-            'main_language' => 'Portuguese',
-            'currency' => 'Kwanza (kz)',
-            'timezone' => 'WAT (UTC+1)',
-            'phone_code' => '+244',
-            'internet_code' => '.ao',
-            ...$totals,
-        ]);
+        return $this->successResponse($data);
     }
 }

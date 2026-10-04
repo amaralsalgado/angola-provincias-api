@@ -11,6 +11,14 @@ use Illuminate\Database\Eloquent\Collection;
 
 class CapitalService
 {
+    /**
+     * The capital of each province, in a stable order, with its province.
+     */
+    public function getCapitals(): Collection
+    {
+        return Capital::with(['province', 'capitalable'])->orderBy('id')->get();
+    }
+
     public function all(): Collection
     {
         return Capital::with(['province', 'capitalable'])->get();
@@ -27,7 +35,7 @@ class CapitalService
             ? Capital::with(['province', 'capitalable'])->where('province_id', $provinceId)->first()
             : null;
 
-        if (!$capital) {
+        if (! $capital) {
             throw new ResourceNotFoundException('capital');
         }
 

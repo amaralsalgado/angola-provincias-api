@@ -13,6 +13,14 @@ class EthnicGroupService
         return EthnicGroup::with('provinces')->get();
     }
 
+    /**
+     * All the ethnic groups, without their provinces.
+     */
+    public function getEthnicGroups(): Collection
+    {
+        return EthnicGroup::orderBy('id')->get();
+    }
+
     public function find(string $slug): EthnicGroup
     {
         return EthnicGroup::with('provinces')->where('slug', $slug)->first()

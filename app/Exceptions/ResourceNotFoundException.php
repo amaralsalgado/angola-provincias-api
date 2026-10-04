@@ -16,8 +16,16 @@ class ResourceNotFoundException extends RuntimeException
         parent::__construct("{$resource} not found");
     }
 
+    /**
+     * The message for the client, in the language of the current request.
+     */
+    public function translatedMessage(): string
+    {
+        return __("api.not_found.{$this->resource}");
+    }
+
     public function render(): JsonResponse
     {
-        return ApiResponse::error(__("api.not_found.{$this->resource}"), 404);
+        return ApiResponse::error($this->translatedMessage(), 404);
     }
 }

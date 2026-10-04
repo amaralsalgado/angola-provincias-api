@@ -13,6 +13,25 @@ use App\Models\Province;
 class AngolaService
 {
     /**
+     * General information about the country, with the total of records of each entity.
+     */
+    public function info(): array
+    {
+        return [
+            'name' => 'Republic of Angola',
+            'continent' => 'Africa',
+            'area' => 1246700,
+            'main_capital' => 'Luanda',
+            'main_language' => 'Portuguese',
+            'currency' => 'Kwanza (kz)',
+            'timezone' => 'WAT (UTC+1)',
+            'phone_code' => '+244',
+            'internet_code' => '.ao',
+            ...$this->totals(),
+        ];
+    }
+
+    /**
      * Total of records of each entity.
      */
     public function totals(): array

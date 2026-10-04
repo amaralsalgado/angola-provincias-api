@@ -19,6 +19,26 @@ class ProvinceService
         return Province::with($this->fullRelations())->get();
     }
 
+    /**
+     * Provinces with their capital, without the municipalities, ethnic groups and languages.
+     */
+    public function getAllWithCapital(): Collection
+    {
+        return Province::with('capital.capitalable')->orderBy('id')->get();
+    }
+
+    /**
+     * The details of a province: its capital and the number of municipalities, communes, districts, ethnic groups and languages it has.
+     */
+    public function getProvinceDetails(string $slug): Province
+    {
+        return Province::with('capital.capitalable')
+            ->withCount(['municipalities', 'communes', 'districts', 'ethnicGroups', 'languages'])
+            ->where('slug', $slug)
+            ->first()
+            ?? throw new ResourceNotFoundException('province');
+    }
+
     public function find(string $slug): Province
     {
         return $this->findBySlug($slug, $this->fullRelations());
@@ -62,6 +82,14 @@ class ProvinceService
         $capital = $this->findBySlug($province, ['capital.capitalable'])->capital?->capitalable;
 
         return $capital ?? throw new ResourceNotFoundException('capital');
+    }
+
+    /**
+     * The communes of all the municipalities of a province, each with its municipality.
+     */
+    public function getProvinceCommunes(string $slug): Collection
+    {
+        return $this->findBySlug($slug)->communes()->with('municipality')->orderBy('communes.id')->get();
     }
 
     public function communes(string $province, string $municipality): Collection
