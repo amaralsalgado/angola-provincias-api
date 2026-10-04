@@ -39,7 +39,7 @@
 
         <x-docs.section.paragraph>
             A API utiliza os seguintes códigos de status para indicar o sucesso ou falha de uma requisição:
-            <ul class="list-disc text-[#565454] dark:text-zinc-300">
+            <ul class="list-disc text-[#565454] dark:text-zinc-300 text-[13px] sm:text-[14px]">
                 <li class="ml-10 mt-3">
                     <strong class="font-medium">200 OK</strong>: A requisição foi bem-sucedida.
                 </li>

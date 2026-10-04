@@ -56,6 +56,13 @@ Route::prefix('docs/{version}')->whereIn('version', $docsVersions)->middleware(S
         })->name('linguas');
 
 
+        //SERVIDOR MCP
+
+        Route::get('/mcp', function () {
+            return view('docs.mcp.index');
+        })->name('mcp');
+
+
         //TRATAMENTO DE ERROS
 
         Route::get('/tratamento-de-erros', function () {
@@ -75,5 +82,9 @@ Route::prefix('docs/{version}')->whereIn('version', $docsVersions)->middleware(S
         Route::get('/versionamento', function () {
             return view('docs.versioning.index');
         })->name('versionamento');
+
+        Route::get('/guia-de-migracao', function () {
+            return view('docs.migration-guide.index');
+        })->name('guia_de_migracao');
     });
 });

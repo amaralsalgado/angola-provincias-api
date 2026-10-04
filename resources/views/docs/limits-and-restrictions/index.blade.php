@@ -26,7 +26,7 @@
             A API é aberta a qualquer pessoa ou organização que precise de informações sobre as províncias de Angola. Isso
             inclui:
 
-            <ul class="list-disc text-[#565454] dark:text-zinc-300">
+            <ul class="list-disc text-[#565454] dark:text-zinc-300 text-[13px] sm:text-[14px]">
                 <li class="ml-10 mt-3">
                     <strong class="font-medium">Desenvolvedores</strong>: Para integrar dados das províncias em aplicativos e
                     websites.
@@ -58,7 +58,7 @@
 
             Toda resposta inclui ainda os seguintes cabeçalhos, que permitem acompanhar o estado do limite:
 
-            <ul class="list-disc text-[#565454] dark:text-zinc-300">
+            <ul class="list-disc text-[#565454] dark:text-zinc-300 text-[13px] sm:text-[14px]">
                 <li class="ml-10 mt-3">
                     <strong class="font-medium">X-RateLimit-Limit</strong>: número máximo de requisições permitidas por
                     minuto.

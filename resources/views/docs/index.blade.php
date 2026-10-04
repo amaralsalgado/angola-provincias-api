@@ -52,6 +52,11 @@
                 informações relevantes sobre cada uma das províncias, incluindo dados como nome, municípios, línguas,
                 distritos, entre outros.
             </x-docs.section.paragraph>
+
+            <x-docs.section.paragraph>
+                Os mesmos dados também podem ser consultados por assistentes de IA, através do
+                <a href="{{ route('docs.mcp') }}" class="underline text-blue-500">servidor MCP</a>.
+            </x-docs.section.paragraph>
         </x-docs.section.sub-section>
 
         <x-docs.section.sub-section title="Objetivo " id="objetivo">
@@ -64,7 +69,7 @@
             <x-docs.section.paragraph>
                 Especificamente, a API pretende:
 
-                <ul class="list-disc text-[#565454] dark:text-zinc-300">
+                <ul class="list-disc text-[#565454] dark:text-zinc-300 text-[13px] sm:text-[14px]">
                     <li class="ml-10 mt-3">
                         Auxiliar desenvolvedores que precisam de dados para criar aplicativos ou websites.
                     </li>
@@ -85,7 +90,7 @@
                 A API é aberta a qualquer pessoa ou organização que precise de informações sobre as províncias de Angola.
                 Isso inclui:
 
-                <ul class="list-disc text-[#565454] dark:text-zinc-300">
+                <ul class="list-disc text-[#565454] dark:text-zinc-300 text-[13px] sm:text-[14px]">
                     <li class="ml-10 mt-3">
                         <strong class="font-medium">Desenvolvedores</strong>: Para integrar dados das províncias em
                         aplicativos e websites.

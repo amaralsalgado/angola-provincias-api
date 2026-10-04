@@ -42,5 +42,11 @@
 
     *{
         font-family: 'Poppins';
+        scrollbar-width: thin;
+        scrollbar-color: #d4d4d8 transparent;
+    }
+
+    .dark *{
+        scrollbar-color: #52525b transparent;
     }
 }

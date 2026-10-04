@@ -80,7 +80,7 @@
         </header>
 
         <aside
-            class="p-[20px_60px] left-[-320px] bg-[#f5f5fa] dark:bg-zinc-900 h-[100vh] overflow-y-auto lg:sticky fixed top-[60px] lg:block lg:col-start-1 lg:col-end-2 z-10 transition-[left_1s] hidden"
+            class="p-[20px_60px] left-[-320px] bg-[#f5f5fa] dark:bg-zinc-900 h-[calc(100dvh-60px)] overflow-y-auto overscroll-contain lg:sticky fixed top-[60px] lg:block lg:col-start-1 lg:col-end-2 z-10 transition-[left_1s] hidden"
             id="aside">
 
             <x-docs.menu.menu />
@@ -91,7 +91,7 @@
             class="md:p-[40px_60px] p-[40px_40px] col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 overflow-x-hidden overflow-y-auto">
 
             <div>
-                <h1 class="md:text-4xl font-semibold mb-5 text-2xl">@yield('title')</h1>
+                <h1 class="text-xl sm:text-2xl md:text-4xl font-semibold mb-5">@yield('title')</h1>
             </div>
 
             @yield('content')

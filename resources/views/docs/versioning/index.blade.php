@@ -36,7 +36,7 @@
     <x-docs.section.section title="Diferenças entre v1 e v2" id="diferencas-entre-v1-e-v2">
 
         <x-docs.section.paragraph>
-            <ul class="list-disc text-[#565454] dark:text-zinc-300">
+            <ul class="list-disc text-[#565454] dark:text-zinc-300 text-[13px] sm:text-[14px]">
                 <li class="ml-10 mt-3">
                     <strong class="font-medium">Caminhos e campos em inglês</strong>: por exemplo,
                     <strong class="font-medium">/provincias</strong> passa a ser
@@ -48,12 +48,13 @@
                     <strong class="font-medium">26-04-1980</strong> para <strong class="font-medium">1980-04-26</strong>.
                 </li>
                 <li class="ml-10">
-                    <strong class="font-medium">Mensagens em inglês</strong>: as mensagens de sucesso e de erro da v2 são
-                    retornadas em inglês.
+                    <strong class="font-medium">Idioma das mensagens à escolha</strong>: as mensagens de sucesso e de erro
+                    da v2 continuam em português por padrão. Para recebê-las em inglês, envie o cabeçalho
+                    <strong class="font-medium">Accept-Language: en</strong>. A v1 responde sempre em português.
                 </li>
                 <li class="ml-10">
                     <strong class="font-medium">Os dados são os mesmos</strong>: nomes e slugs continuam em português
-                    (ex.: Bié, bie), e o limite de requisições é compartilhado entre as duas versões.
+                    (ex.: Bié, bie).
                 </li>
             </ul>
         </x-docs.section.paragraph>
