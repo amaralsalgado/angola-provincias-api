@@ -3,6 +3,7 @@ services:
         build:
             context: ./
             dockerfile: Dockerfile
+        user: "1000:1000"
         volumes:
             - ./..:/var/www
         ports:

@@ -165,7 +165,7 @@ docker compose exec app php artisan test
 ```
 
 > [!NOTE]
-> O container roda como `root`, então os arquivos que ele cria (como `vendor/` e `node_modules/`) pertencem ao `root` na sua máquina. Se precisar editá-los ou apagá-los, ajuste o dono com `sudo chown -R $USER:$USER .`.
+> O container roda com o UID e o GID `1000`, para que os arquivos que ele cria (como `vendor/` e `node_modules/`) pertençam ao seu usuário. Se o seu usuário tiver outro UID (confira com `id -u`), ajuste `user` no `docker/docker-compose.yml` e o `usermod`/`groupmod` no `docker/Dockerfile`.
 
 ### 💻 **Sem Docker**
 
