@@ -13,39 +13,44 @@ Esta API foi projetada para ser simples e eficiente, permitindo consultas rápid
 - Comunas </br>
 - E outras informações.
 
+Os dados também podem ser consultados por assistentes de IA através de um [servidor MCP](#-servidor-mcp).
+
 
 ### 📄 **Documentação Oficial**  
 🔗 [https://angolaprovinciasapi.ggwp.com.br](https://angolaprovinciasapi.ggwp.com.br)
 
 ### 🔗 **Endpoint Base**
-https://angolaprovinciasapi.ggwp.com.br/api/v1
+https://angolaprovinciasapi.ggwp.com.br/api/v2
+
+> [!WARNING]
+> Estes exemplos usam a **v2**, a versão recomendada, com caminhos e campos em inglês. A **v1**, com caminhos e campos em português, continua disponível em `/api/v1`. Consulte o [guia de migração](https://angolaprovinciasapi.ggwp.com.br/docs/2.x/guia-de-migracao) para ver o que muda entre as duas.
 
 #### **Exemplo de uso**
 
 ```json
-// GET https://angolaprovinciasapi.ggwp.com.br/api/v1/provincias
+// GET https://angolaprovinciasapi.ggwp.com.br/api/v2/provinces/uige
 
 {
     "success": true,
     "code": 200,
     "message": "Sucesso",
     "data": {
-        "nome": "Uíge",
+        "name": "Uíge",
         "slug": "uige",
-        "extensao": 58698,
-        "data_fundacao": "31-05-1887",
+        "area": 58698,
+        "founded_at": "1887-05-31",
         "capital": {
-            "nome": "Uíge",
+            "name": "Uíge",
             "slug": "uige"
         },
-        "municipios": [
+        "municipalities": [
             {
-                "nome": "Maquela do Zombo",
+                "name": "Maquela do Zombo",
                 "slug": "maquela-do-zombo",
-                "distritos": [],
-                "comunas": [
+                "districts": [],
+                "communes": [
                     {
-                        "nome": "Maquela do Zombo",
+                        "name": "Maquela do Zombo",
                         "slug": "maquela-do-zombo"
                     },
                     //...
@@ -53,16 +58,16 @@ https://angolaprovinciasapi.ggwp.com.br/api/v1
             },
             //...
         ],
-        "etnias": [
+        "ethnic_groups": [
             {
-                "nome": "Ambundu",
+                "name": "Ambundu",
                 "slug": "ambundu"
             },
             //...
         ],
-        "linguas": [
+        "languages": [
             {
-                "nome": "Kikongo",
+                "name": "Kikongo",
                 "slug": "kikongo"
             },
             //...
@@ -72,10 +77,97 @@ https://angolaprovinciasapi.ggwp.com.br/api/v1
 
 ```
 
+Nomes e slugs continuam em português (Uíge, uige).
+
+**Idioma das mensagens:** a v2 responde em português por padrão e em inglês quando a requisição envia o cabeçalho `Accept-Language: en`.
+
+
+## 🤖 Servidor MCP
+
+Assistentes de IA, como o Claude, podem consultar os mesmos dados através de um servidor [MCP](https://modelcontextprotocol.io) somente leitura, sem autenticação:
+
+```
+https://angolaprovinciasapi.ggwp.com.br/mcp/angola-provinces
+```
+
+No Claude Code, adicione o servidor com:
+
+```bash
+claude mcp add --transport http angola-provinces https://angolaprovinciasapi.ggwp.com.br/mcp/angola-provinces
+```
+
 Para mais informações consulte a documentação oficial em:
 🔗 [https://angolaprovinciasapi.ggwp.com.br](https://angolaprovinciasapi.ggwp.com.br)
 
 ## 🛠️ Configuração do Ambiente
+
+### 🐳 **Com Docker**
+
+O ambiente em `docker/` sobe a aplicação (PHP-FPM e Node, para o Vite), o MariaDB, o phpMyAdmin e o Nginx.
+
+1. **Faça um Fork** do projeto no GitHub e **clone o repositório**:
+
+    ```bash
+    git clone https://github.com/seu-usuario/nome-do-repo.git
+    cd angola-provincias-api
+    ```
+
+2. **Crie o arquivo de ambiente** e ajuste estas variáveis para o Docker:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+    ```env
+    APP_URL=http://localhost:8000
+    API_BASE_URL=http://localhost:8000/api/v1
+    API_BASE_URL_V2=http://localhost:8000/api/v2
+    DB_HOST=db
+    ```
+
+3. **Suba os containers**:
+
+    ```bash
+    cd docker
+    docker compose up -d --build
+    ```
+
+4. **Instale as dependências, gere a chave e rode as migrations com os seeders** (os comandos abaixo também são executados na pasta `docker`):
+
+    ```bash
+    docker compose exec app composer install
+    docker compose exec app npm install
+    docker compose exec app php artisan key:generate
+    docker compose exec app php artisan migrate --seed
+    ```
+
+5. **Inicie o Vite**, em outro terminal, para compilar o CSS e o JS da documentação:
+
+    ```bash
+    docker compose exec app npm run dev
+    ```
+
+6. **Acesse**:
+
+    | Serviço | Endereço |
+    |---|---|
+    | Documentação | http://localhost:8000 |
+    | API v2 | http://localhost:8000/api/v2 |
+    | API v1 | http://localhost:8000/api/v1 |
+    | Servidor MCP | http://localhost:8000/mcp/angola-provinces |
+    | phpMyAdmin | http://localhost:8080 |
+    | Banco de dados (a partir da sua máquina) | `localhost:3006` |
+
+Para executar os testes dentro do container:
+
+```bash
+docker compose exec app php artisan test
+```
+
+> [!NOTE]
+> O container roda como `root`, então os arquivos que ele cria (como `vendor/` e `node_modules/`) pertencem ao `root` na sua máquina. Se precisar editá-los ou apagá-los, ajuste o dono com `sudo chown -R $USER:$USER .`.
+
+### 💻 **Sem Docker**
 
 1. **Faça um Fork** do projeto no GitHub.
 2. **Clone o repositório** para sua máquina local:
