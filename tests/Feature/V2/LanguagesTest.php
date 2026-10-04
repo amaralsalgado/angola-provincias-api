@@ -11,7 +11,7 @@ class LanguagesTest extends TestCase
 {
     protected function successMessage(): string
     {
-        return 'Success';
+        return 'Sucesso';
     }
 
     use AssertsApiResponses;
@@ -54,6 +54,6 @@ class LanguagesTest extends TestCase
     {
        $response = $this->json('get', '/api/v2/languages/non-existent-language');
 
-        $this->assertApiNotFoundResponse($response, 'Language not found');
+        $this->assertApiNotFoundResponse($response, 'Língua não encontrada');
     }
 }

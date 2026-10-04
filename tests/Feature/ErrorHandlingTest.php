@@ -52,11 +52,11 @@ class ErrorHandlingTest extends TestCase
         $this->get('/does-not-exist')->assertStatus(404)->assertSee('404');
     }
 
-    public function test_v2_unexpected_api_errors_are_answered_in_english(): void
+    public function test_v2_unexpected_api_errors_are_answered_in_english_when_requested(): void
     {
         Route::get('/api/v2/test-boom', fn () => throw new \RuntimeException('boom'));
 
-        $this->getJson('/api/v2/test-boom')
+        $this->getJson('/api/v2/test-boom', ['Accept-Language' => 'en'])
             ->assertStatus(500)
             ->assertExactJson([
                 'success' => false,
@@ -66,9 +66,9 @@ class ErrorHandlingTest extends TestCase
             ]);
     }
 
-    public function test_v2_unknown_route_is_answered_in_english(): void
+    public function test_v2_unknown_route_is_answered_in_english_when_requested(): void
     {
-        $this->get('/api/v2/does-not-exist')
+        $this->get('/api/v2/does-not-exist', ['Accept-Language' => 'en'])
             ->assertStatus(404)
             ->assertExactJson([
                 'success' => false,
@@ -78,9 +78,9 @@ class ErrorHandlingTest extends TestCase
             ]);
     }
 
-    public function test_v2_wrong_method_is_answered_in_english(): void
+    public function test_v2_wrong_method_is_answered_in_english_when_requested(): void
     {
-        $this->post('/api/v2/provinces')
+        $this->post('/api/v2/provinces', [], ['Accept-Language' => 'en'])
             ->assertStatus(405)
             ->assertHeader('Allow')
             ->assertExactJson([
@@ -89,5 +89,33 @@ class ErrorHandlingTest extends TestCase
                 'message' => 'Method not allowed',
                 'data' => [],
             ]);
+    }
+
+    public function test_v2_answers_in_portuguese_by_default(): void
+    {
+        $this->getJson('/api/v2/provinces/atlantida')
+            ->assertStatus(404)
+            ->assertJsonPath('message', 'Província não encontrada');
+    }
+
+    public function test_v2_follows_the_accept_language_header(): void
+    {
+        $this->getJson('/api/v2/provinces/atlantida', ['Accept-Language' => 'en-US,en;q=0.9,pt;q=0.8'])
+            ->assertStatus(404)
+            ->assertJsonPath('message', 'Province not found');
+    }
+
+    public function test_v2_falls_back_to_portuguese_for_unsupported_languages(): void
+    {
+        $this->getJson('/api/v2/provinces/atlantida', ['Accept-Language' => 'fr-FR,fr;q=0.9'])
+            ->assertStatus(404)
+            ->assertJsonPath('message', 'Província não encontrada');
+    }
+
+    public function test_v1_ignores_the_accept_language_header(): void
+    {
+        $this->getJson('/api/v1/provincias/atlantida', ['Accept-Language' => 'en'])
+            ->assertStatus(404)
+            ->assertJsonPath('message', 'Província não encontrada');
     }
 }

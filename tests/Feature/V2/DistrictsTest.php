@@ -11,7 +11,7 @@ class DistrictsTest extends TestCase
 {
     protected function successMessage(): string
     {
-        return 'Success';
+        return 'Sucesso';
     }
 
     use AssertsApiResponses;
@@ -48,6 +48,6 @@ class DistrictsTest extends TestCase
     {
        $response = $this->json('get', '/api/v2/districts/non-existent-district');
 
-        $this->assertApiNotFoundResponse($response, 'District not found');
+        $this->assertApiNotFoundResponse($response, 'Distrito não encontrado');
     }
 }

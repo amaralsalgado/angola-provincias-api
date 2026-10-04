@@ -10,7 +10,7 @@ class ProvincesTest extends TestCase
 {
     protected function successMessage(): string
     {
-        return 'Success';
+        return 'Sucesso';
     }
 
     use AssertsApiResponses;
@@ -81,7 +81,7 @@ class ProvincesTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/provinces/non-existent-province');
 
-        $this->assertApiNotFoundResponse($response, 'Province not found');
+        $this->assertApiNotFoundResponse($response, 'Província não encontrada');
     }
 
     public function test_can_get_capital_from_province()
@@ -140,7 +140,7 @@ class ProvincesTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/provinces/luanda/languages/non-existent-language');
 
-        $this->assertApiNotFoundResponse($response, 'Language not found');
+        $this->assertApiNotFoundResponse($response, 'Língua não encontrada');
     }
 
     public function test_can_get_all_municipalities_from_province()
@@ -173,7 +173,7 @@ class ProvincesTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/provinces/luanda/municipalities/non-existent-municipality');
 
-        $this->assertApiNotFoundResponse($response, 'Municipality not found');
+        $this->assertApiNotFoundResponse($response, 'Município não encontrado');
     }
 
     public function test_can_get_all_communes_from_specific_municipality_of_province()
@@ -207,7 +207,7 @@ class ProvincesTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/provinces/luanda/municipalities/cacuaco/communes/non-existent-commune');
 
-        $this->assertApiNotFoundResponse($response, 'Commune not found');
+        $this->assertApiNotFoundResponse($response, 'Comuna não encontrada');
     }
 
     public function test_can_get_all_districts_from_specific_municipality_of_province()
@@ -228,6 +228,6 @@ class ProvincesTest extends TestCase
     {
         $response =  $this->json('get', '/api/v2/provinces/luanda/municipalities/cacuaco/districts/non-existent-district');
 
-        $this->assertApiNotFoundResponse($response, 'District not found');
+        $this->assertApiNotFoundResponse($response, 'Distrito não encontrado');
     }
 }

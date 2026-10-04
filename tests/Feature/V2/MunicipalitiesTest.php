@@ -10,7 +10,7 @@ class MunicipalitiesTest extends TestCase
 {
     protected function successMessage(): string
     {
-        return 'Success';
+        return 'Sucesso';
     }
 
     use AssertsApiResponses;
@@ -92,6 +92,6 @@ class MunicipalitiesTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/municipalities/non-existent-municipality');
 
-        $this->assertApiNotFoundResponse($response, 'Municipality not found');
+        $this->assertApiNotFoundResponse($response, 'Município não encontrado');
     }
 }

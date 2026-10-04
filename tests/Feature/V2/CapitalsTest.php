@@ -11,7 +11,7 @@ class CapitalsTest extends TestCase
 {
     protected function successMessage(): string
     {
-        return 'Success';
+        return 'Sucesso';
     }
 
 
@@ -54,6 +54,6 @@ class CapitalsTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/capitals/non-existent-capital');
 
-        $this->assertApiNotFoundResponse($response, 'Capital not found');
+        $this->assertApiNotFoundResponse($response, 'Capital não encontrada');
     }
 }

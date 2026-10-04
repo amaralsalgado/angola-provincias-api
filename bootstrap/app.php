@@ -2,7 +2,6 @@
 
 use App\Exceptions\ResourceNotFoundException;
 use App\Http\Middleware\SetApiLocale;
-use App\Http\Middleware\XssProtection;
 use App\Support\ApiResponse;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -25,7 +24,6 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->api(prepend: [
             ThrottleRequests::class.':api',
         ]);
-        $middleware->api(append: [XssProtection::class]);
         $middleware->append(SetApiLocale::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {

@@ -14,11 +14,11 @@ class HomeTest extends TestCase
         $response->assertOk()->assertExactJson([
             'success' => true,
             'code' => Response::HTTP_OK,
-            'message' => 'Success',
+            'message' => 'Sucesso',
             'data' => [
                 'name' => 'Republic of Angola',
                 'continent' => 'Africa',
-                'area' => '1,246,700 km²',
+                'area' => 1246700,
                 'main_capital' => 'Luanda',
                 'main_language' => 'Portuguese',
                 'currency' => 'Kwanza (kz)',
@@ -30,7 +30,7 @@ class HomeTest extends TestCase
                 'municipalities' => 326,
                 'communes' => 378,
                 'districts' => 0,
-                'ethnic_groups' => 11,
+                'ethnic_groups' => 12,
                 'languages' => 12,
             ],
         ]);

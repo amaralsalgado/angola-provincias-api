@@ -11,7 +11,7 @@ class EthnicGroupsTest extends TestCase
 {
     protected function successMessage(): string
     {
-        return 'Success';
+        return 'Sucesso';
     }
 
     use AssertsApiResponses;
@@ -55,6 +55,6 @@ class EthnicGroupsTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/ethnic-groups/non-existent-ethnic-group');
 
-        $this->assertApiNotFoundResponse($response, 'Ethnic group not found');
+        $this->assertApiNotFoundResponse($response, 'Etnia não encontrada');
     }
 }

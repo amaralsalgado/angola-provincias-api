@@ -10,7 +10,7 @@ class CommunesTest extends TestCase
 {
     protected function successMessage(): string
     {
-        return 'Success';
+        return 'Sucesso';
     }
 
 
@@ -57,6 +57,6 @@ class CommunesTest extends TestCase
     {
         $response = $this->json('get', '/api/v2/communes/non-existent-commune');
 
-        $this->assertApiNotFoundResponse($response, 'Commune not found');
+        $this->assertApiNotFoundResponse($response, 'Comuna não encontrada');
     }
 }
