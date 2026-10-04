@@ -12,7 +12,7 @@
                 "provincia": {
                     "nome": "Bengo",
                     "slug": "bengo",
-                    "extensao": "31.371 km²",
+                    "extensao": 31371,
                     "data_fundacao": "26-04-1980"
                 }
             }

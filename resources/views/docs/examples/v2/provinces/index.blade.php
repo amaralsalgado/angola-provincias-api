@@ -2,12 +2,12 @@
     {
         "success": true,
         "code": 200,
-        "message": "Success",
+        "message": "Sucesso",
         "data": [
             {
                 "name": "Luanda",
                 "slug": "luanda",
-                "area": "18.826 km²",
+                "area": 113,
                 "founded_at": "1576-01-25",
                 "capital": {
                     "name": "Ingombota",

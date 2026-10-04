@@ -2,14 +2,14 @@
     {
         "success": true,
         "code": 200,
-        "message": "Success",
+        "message": "Sucesso",
         "data": {
             "name": "Cacongo",
             "slug": "cacongo",
             "province": {
                 "name": "Cabinda",
                 "slug": "cabinda",
-                "area": "7.283 km²",
+                "area": 7283,
                 "founded_at": "1862-02-28"
             }
         }

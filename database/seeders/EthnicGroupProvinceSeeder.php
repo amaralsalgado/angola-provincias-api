@@ -107,7 +107,7 @@ class EthnicGroupProvinceSeeder extends Seeder
             [
                 'province' => 'Moxico Leste',
                 'province_id' => 19,
-                'ethnic_groups' => [],
+                'ethnic_groups' => [12],
             ],
             [
                 'province' => 'Cuando',

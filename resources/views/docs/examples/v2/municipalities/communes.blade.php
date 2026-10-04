@@ -2,7 +2,7 @@
     {
         "success": true,
         "code": 200,
-        "message": "Success",
+        "message": "Sucesso",
         "data": [
             {
                 "name": "Golfe",

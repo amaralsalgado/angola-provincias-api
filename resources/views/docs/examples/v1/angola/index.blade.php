@@ -6,7 +6,7 @@
         "data": {
             "nome": "República de Angola",
             "continente": "África",
-            "extensao": "1.246.700 km²",
+            "extensao": 1246700,
             "capital_principal": "Luanda",
             "lingua_principal": "Português",
             "moeda": "Kwanza (kz)",

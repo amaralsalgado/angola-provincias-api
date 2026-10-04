@@ -9,7 +9,7 @@
             "provincia": {
                 "nome": "Cabinda",
                 "slug": "cabinda",
-                "extensao": "7.283 km²",
+                "extensao": 7283,
                 "data_fundacao": "28-02-1862"
             }
         }

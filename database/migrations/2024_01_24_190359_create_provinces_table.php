@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255)->nullable(false);
             $table->string('slug', 255)->nullable(false);
-            $table->string('area', 30)->nullable(true);
+            $table->unsignedInteger('area')->nullable();
             $table->date('founded_at')->nullable(false);
             $table->timestamps();
         });

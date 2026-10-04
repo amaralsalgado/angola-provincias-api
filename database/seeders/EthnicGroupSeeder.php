@@ -57,6 +57,10 @@ class EthnicGroupSeeder extends Seeder
             [
                 'name' => 'Bailundo',
                 'slug' => 'bailundo'
+            ],
+            [
+                'name' => 'Lunda-Quioco',
+                'slug' => 'lunda-quioco'
             ]
         ];
 

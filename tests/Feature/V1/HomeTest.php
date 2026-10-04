@@ -14,7 +14,7 @@ class HomeTest extends TestCase
         return [
             'nome' => 'República de Angola',
             'continente' => 'África',
-            'extensao' => '1.246.700 km²',
+            'extensao' => 1246700,
             'capital_principal' => 'Luanda',
             'lingua_principal' => 'Português',
             'moeda' => 'Kwanza (kz)',
@@ -26,7 +26,7 @@ class HomeTest extends TestCase
             'municipios' => 326,
             'comunas' => 378,
             'distritos' => 0,
-            'etnias' => 11,
+            'etnias' => 12,
             'linguas' => 12,
         ];
     }

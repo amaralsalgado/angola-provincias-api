@@ -2,7 +2,7 @@
     {
         "success": false,
         "code": 404,
-        "message": "Province not found",
+        "message": "Província não encontrada",
         "data": []
     }
 </x-code>

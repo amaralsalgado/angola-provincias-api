@@ -2,7 +2,7 @@
     {
         "success": true,
         "code": 200,
-        "message": "Success",
+        "message": "Sucesso",
         "data": {
             "name": "Bela Vista",
             "slug": "bela-vista",
@@ -12,7 +12,7 @@
                 "province": {
                     "name": "Bengo",
                     "slug": "bengo",
-                    "area": "31.371 km²",
+                    "area": 31371,
                     "founded_at": "1980-04-26"
                 }
             }

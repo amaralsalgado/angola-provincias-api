@@ -2,7 +2,7 @@
     {
         "success": true,
         "code": 200,
-        "message": "Success",
+        "message": "Sucesso",
         "data": [
             {
                 "name": "Gabela",
@@ -10,7 +10,7 @@
                 "province": {
                     "name": "Cuanza Sul",
                     "slug": "cuanza-sul",
-                    "area": "55.660 km²",
+                    "area": 55660,
                     "founded_at": "1914-09-15"
                 }
             }

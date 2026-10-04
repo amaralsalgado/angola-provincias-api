@@ -32,7 +32,7 @@ https://angolaprovinciasapi.ggwp.com.br/api/v1
     "data": {
         "nome": "Uíge",
         "slug": "uige",
-        "extensao": "58.698 km²",
+        "extensao": 58698,
         "data_fundacao": "31-05-1887",
         "capital": {
             "nome": "Uíge",

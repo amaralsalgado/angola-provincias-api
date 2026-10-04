@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Province extends Model
@@ -13,13 +14,16 @@ class Province extends Model
     use HasFactory;
 
     protected $table = 'provinces';
+
     protected $fillable = ['name', 'slug', 'area', 'founded_at'];
+
     protected $hidden = ['id', 'created_at', 'updated_at', 'pivot'];
 
     protected function casts(): array
     {
         return [
-            'founded_at' => 'date:d-m-Y'
+            'area' => 'integer',
+            'founded_at' => 'date:d-m-Y',
         ];
     }
 
@@ -31,6 +35,16 @@ class Province extends Model
     public function municipalities(): HasMany
     {
         return $this->hasMany(Municipality::class);
+    }
+
+    public function communes(): HasManyThrough
+    {
+        return $this->hasManyThrough(Commune::class, Municipality::class);
+    }
+
+    public function districts(): HasManyThrough
+    {
+        return $this->hasManyThrough(District::class, Municipality::class);
     }
 
     public function languages(): BelongsToMany

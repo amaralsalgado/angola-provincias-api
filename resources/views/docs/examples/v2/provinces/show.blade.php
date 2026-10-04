@@ -2,11 +2,11 @@
     {
         "success": true,
         "code": 200,
-        "message": "Success",
+        "message": "Sucesso",
         "data": {
             "name": "Uíge",
             "slug": "uige",
-            "area": "58.698 km²",
+            "area": 58698,
             "founded_at": "1887-05-31",
             "capital": {
                 "name": "Uíge",

@@ -10,7 +10,7 @@
                 "provincia": {
                     "nome": "Cuanza Sul",
                     "slug": "cuanza-sul",
-                    "extensao": "55.660 km²",
+                    "extensao": 55660,
                     "data_fundacao": "15-09-1914"
                 }
             }

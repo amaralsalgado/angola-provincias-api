@@ -79,8 +79,8 @@ class CommuneSeeder extends Seeder
             ],
             [
                 'province_id' => 1,
-                'municipality' => 'Pangila',
-                'slug' => 'pangila',
+                'municipality' => 'Panguila',
+                'slug' => 'panguila',
                 'communes' => []
             ],
             [
@@ -745,8 +745,8 @@ class CommuneSeeder extends Seeder
             ],
             [
                 'province_id' => 8,
-                'municipality' => 'Ombandja',
-                'slug' => 'ombandja',
+                'municipality' => 'Ombadja',
+                'slug' => 'ombadja',
                 'communes' => ['Xangongo', 'Ombala yo Mungu']
             ],
             [
@@ -1041,7 +1041,7 @@ class CommuneSeeder extends Seeder
                 'province_id' => 11,
                 'municipality' => 'Belas',
                 'slug' => 'belas',
-                'communes' => ['Benfica', 'Cabolombo', 'Barra do Cuanza', 'Ramiros']
+                'communes' => ['Cabolombo', 'Barra do Cuanza', 'Ramiros']
             ],
             [
                 'province_id' => 11,
@@ -1131,7 +1131,7 @@ class CommuneSeeder extends Seeder
                 'province_id' => 11,
                 'municipality' => 'Talatona',
                 'slug' => 'talatona',
-                'communes' => []
+                'communes' => ['Talatona', 'Benfica']
             ],
             [
                 'province_id' => 12,
@@ -1773,7 +1773,7 @@ class CommuneSeeder extends Seeder
                 'province_id' => 18,
                 'municipality' => 'Nzeto',
                 'slug' => 'nzeto',
-                'communes' => ['Nzeto', 'Musserra', 'Quibala Norte']
+                'communes' => ['Nzeto', 'Musserra']
             ],
             [
                 'province_id' => 18,

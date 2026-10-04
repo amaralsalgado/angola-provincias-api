@@ -9,7 +9,7 @@
             "provincia": {
                 "nome": "Luanda",
                 "slug": "luanda",
-                "extensao": "18.826 km²",
+                "extensao": 113,
                 "data_fundacao": "25-01-1576"
             }
         }

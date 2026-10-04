@@ -79,8 +79,8 @@ class DistrictSeeder extends Seeder
                 ],
                 [
                     'province_id' => 1,
-                    'municipality' => 'Pangila',
-                    'slug' => 'pangila',
+                    'municipality' => 'Panguila',
+                    'slug' => 'panguila',
                     'districts' => []
                 ],
                 [
@@ -745,8 +745,8 @@ class DistrictSeeder extends Seeder
                 ],
                 [
                     'province_id' => 8,
-                    'municipality' => 'Ombandja',
-                    'slug' => 'ombandja',
+                    'municipality' => 'Ombadja',
+                    'slug' => 'ombadja',
                     'districts' => []
                 ],
                 [

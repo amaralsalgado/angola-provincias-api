@@ -2,7 +2,7 @@
     {
         "success": false,
         "code": 500,
-        "message": "Internal server error",
+        "message": "Erro interno do servidor",
         "data": []
     }
 </x-code>

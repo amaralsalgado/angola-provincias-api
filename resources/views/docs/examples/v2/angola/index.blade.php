@@ -2,11 +2,11 @@
     {
         "success": true,
         "code": 200,
-        "message": "Success",
+        "message": "Sucesso",
         "data": {
             "name": "Republic of Angola",
             "continent": "Africa",
-            "area": "1,246,700 km²",
+            "area": 1246700,
             "main_capital": "Luanda",
             "main_language": "Portuguese",
             "currency": "Kwanza (kz)",
