@@ -17,18 +17,18 @@ Os dados também podem ser consultados por assistentes de IA através de um [ser
 
 
 ### 📄 **Documentação Oficial**  
-🔗 [https://angolaprovinciasapi.ggwp.com.br](https://angolaprovinciasapi.ggwp.com.br)
+🔗 [https://angolaprovinciasapi.ao](https://angolaprovinciasapi.ao)
 
 ### 🔗 **Endpoint Base**
-https://angolaprovinciasapi.ggwp.com.br/api/v2
+https://angolaprovinciasapi.ao/api/v2
 
 > [!WARNING]
-> Estes exemplos usam a **v2**, a versão recomendada, com caminhos e campos em inglês. A **v1**, com caminhos e campos em português, continua disponível em `/api/v1`. Consulte o [guia de migração](https://angolaprovinciasapi.ggwp.com.br/docs/2.x/guia-de-migracao) para ver o que muda entre as duas.
+> Estes exemplos usam a **v2**, a versão recomendada, com caminhos e campos em inglês. A **v1**, com caminhos e campos em português, continua disponível em `/api/v1`. Consulte o [guia de migração](https://angolaprovinciasapi.ao/docs/2.x/guia-de-migracao) para ver o que muda entre as duas.
 
 #### **Exemplo de uso**
 
 ```json
-// GET https://angolaprovinciasapi.ggwp.com.br/api/v2/provinces/uige
+// GET https://angolaprovinciasapi.ao/api/v2/provinces/uige
 
 {
     "success": true,
@@ -87,17 +87,17 @@ Nomes e slugs continuam em português (Uíge, uige).
 Assistentes de IA, como o Claude, podem consultar os mesmos dados através de um servidor [MCP](https://modelcontextprotocol.io) somente leitura, sem autenticação:
 
 ```
-https://angolaprovinciasapi.ggwp.com.br/mcp/angola-provinces
+https://angolaprovinciasapi.ao/mcp/angola-provinces
 ```
 
 No Claude Code, adicione o servidor com:
 
 ```bash
-claude mcp add --transport http angola-provinces https://angolaprovinciasapi.ggwp.com.br/mcp/angola-provinces
+claude mcp add --transport http angola-provinces https://angolaprovinciasapi.ao/mcp/angola-provinces
 ```
 
 Para mais informações consulte a documentação oficial em:
-🔗 [https://angolaprovinciasapi.ggwp.com.br](https://angolaprovinciasapi.ggwp.com.br)
+🔗 [https://angolaprovinciasapi.ao](https://angolaprovinciasapi.ao)
 
 ## 🛠️ Configuração do Ambiente
 
