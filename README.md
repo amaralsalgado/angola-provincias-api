@@ -1,7 +1,7 @@
 # 🇦🇴 API Províncias de Angola
 A API Províncias de Angola é um serviço público que oferece acesso a dados detalhados sobre as províncias angolanas.
 
-![Versão](https://img.shields.io/badge/Versão-v1.1.0-green) ![Versão](https://img.shields.io/badge/License-MIT-red)
+![Versão](https://img.shields.io/badge/Versão-v2.0.0-green) ![Versão](https://img.shields.io/badge/License-MIT-red)
 
 Esta API foi projetada para ser simples e eficiente, permitindo consultas rápidas de informações relevantes sobre cada uma das províncias, incluindo dados como:
 - Nome da província </br>
