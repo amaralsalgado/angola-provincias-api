@@ -1,17 +1,36 @@
-FROM php:8.2-fpm
+FROM php:8.2-fpm-bookworm
 
-RUN apt update && apt install -y libzip-dev zip unzip nodejs npm \
-    && docker-php-ext-install pdo pdo_mysql
+ARG DOCKER_USER_UID=1000
+ARG DOCKER_GROUP_GID=1000
 
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+ENV COMPOSER_HOME=/tmp/composer
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git zip unzip curl \
+    libfreetype-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    libicu-dev \
+    libzip-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd bcmath intl pdo_mysql pcntl zip \
+    && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+
+COPY docker/php/8.2/*.ini $PHP_INI_DIR/conf.d/
+
+COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 WORKDIR /var/www
-COPY . .
 
-# same uid/gid as the host user, so the files created by the container are not owned by root
-RUN usermod -u 1000 www-data \
-    && groupmod -g 1000 www-data
+RUN usermod -u ${DOCKER_USER_UID} www-data \
+    && groupmod -g ${DOCKER_GROUP_GID} www-data
 
 USER www-data
 
 EXPOSE 9000
-CMD ["php-fpm"]
+ENTRYPOINT ["entrypoint.sh"]

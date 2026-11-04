@@ -1,0 +1,77 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile
+            args:
+                DOCKER_USER_UID: ${DOCKER_USER_UID:-1000}
+                DOCKER_GROUP_GID: ${DOCKER_GROUP_GID:-1000}
+        volumes:
+            - ".:/var/www"
+        depends_on:
+            database:
+                condition: service_healthy
+        healthcheck:
+            test: ["CMD", "php", "-r", "exit(@fsockopen('127.0.0.1', 9000) ? 0 : 1);"]
+            interval: 5s
+            timeout: 3s
+            retries: 5
+            start_period: 5m
+
+    nginx:
+        image: nginx
+        restart: always
+        ports:
+            - "8000:80"
+        volumes:
+            - "./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro"
+            - "./public:/var/www/public"
+        depends_on:
+            app:
+                condition: service_healthy
+
+    database:
+        image: mysql
+        restart: unless-stopped
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+            MYSQL_DATABASE: ${DB_DATABASE:-laravel}
+        ports:
+            - "${DB_PORT:-3306}:3306"
+        volumes:
+            - "database_data:/var/lib/mysql"
+        healthcheck:
+            test: ["CMD-SHELL", "mysqladmin -u root -p ping"]
+            interval: 10s
+            timeout: 10s
+            retries: 5
+            start_period: 10s
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+            - "8080:80"
+        environment:
+            PMA_HOST: database
+            PMA_PORT: ${DB_PORT:-3306}
+        depends_on:
+            database:
+                condition: service_healthy
+
+    node:
+        image: "node:24"
+        user: "node"
+        working_dir: /var/www
+        environment:
+        - NODE_ENV=development
+        volumes:
+        - ./:/var/www
+        ports:
+        - "5173:5173"
+        command: sh -c "npm install --no-audit --no-fund && exec npm run dev"
+        depends_on:
+            - app
+
+volumes:
+    database_data:
