@@ -103,7 +103,7 @@ Para mais informações consulte a documentação oficial em:
 
 ### 🐳 **Com Docker**
 
-O ambiente em `docker/` sobe a aplicação (PHP-FPM e Node, para o Vite), o MariaDB, o phpMyAdmin e o Nginx.
+O `docker-compose.yml`, na raiz do projeto, sobe a aplicação (PHP-FPM), o Node (para o Vite), o MySQL, o phpMyAdmin e o Nginx. O `Dockerfile` e as configurações do Nginx e do PHP ficam em `docker/`.
 
 1. **Faça um Fork** do projeto no GitHub e **clone o repositório**:
 
@@ -122,32 +122,36 @@ O ambiente em `docker/` sobe a aplicação (PHP-FPM e Node, para o Vite), o Mari
     APP_URL=http://localhost:8000
     API_BASE_URL=http://localhost:8000/api/v1
     API_BASE_URL_V2=http://localhost:8000/api/v2
-    DB_HOST=db
+    DB_HOST=database
     ```
 
-3. **Suba os containers**:
+3. **Suba os containers**, na raiz do projeto:
 
     ```bash
-    cd docker
     docker compose up -d --build
     ```
 
-4. **Instale as dependências, gere a chave e rode as migrations com os seeders** (os comandos abaixo também são executados na pasta `docker`):
+    Na primeira vez o comando demora alguns minutos. O Nginx só inicia depois que o `app` ficar pronto, como explica o passo 4. O container `node` instala as dependências do front-end (`npm install`) e inicia o Vite (`npm run dev`) sozinho, para compilar o CSS e o JS da documentação. Para acompanhar, use outro terminal:
 
     ```bash
-    docker compose exec app composer install
-    docker compose exec app npm install
-    docker compose exec app php artisan key:generate
-    docker compose exec app php artisan migrate --seed
+    docker compose logs -f node
     ```
 
-5. **Inicie o Vite**, em outro terminal, para compilar o CSS e o JS da documentação:
+4. **Rode os seeders**:
+
+    Ao iniciar, o container `app` executa o `docker/php/entrypoint.sh`, que instala as dependências do PHP (`composer install`) se o `vendor/` não existir, gera a `APP_KEY` se ela estiver vazia e roda as migrations. Só então o `php-fpm` sobe e o `app` passa a ser considerado saudável, o que libera o início do Nginx. Para acompanhar essa preparação, use outro terminal:
 
     ```bash
-    docker compose exec app npm run dev
+    docker compose logs -f app
     ```
 
-6. **Acesse**:
+    Quando o `docker compose up` terminar, a API já responde. Rode os seeders (só na primeira vez):
+
+    ```bash
+    docker compose exec app php artisan db:seed
+    ```
+
+5. **Acesse**:
 
     | Serviço | Endereço |
     |---|---|
@@ -156,7 +160,7 @@ O ambiente em `docker/` sobe a aplicação (PHP-FPM e Node, para o Vite), o Mari
     | API v1 | http://localhost:8000/api/v1 |
     | Servidor MCP | http://localhost:8000/mcp/angola-provinces |
     | phpMyAdmin | http://localhost:8080 |
-    | Banco de dados (a partir da sua máquina) | `localhost:3006` |
+    | Banco de dados (a partir da sua máquina) | `localhost:3306` (ou o valor de `DB_PORT` no `.env`) |
 
 Para executar os testes dentro do container:
 
@@ -165,7 +169,7 @@ docker compose exec app php artisan test
 ```
 
 > [!NOTE]
-> O container roda com o UID e o GID `1000`, para que os arquivos que ele cria (como `vendor/` e `node_modules/`) pertençam ao seu usuário. Se o seu usuário tiver outro UID (confira com `id -u`), ajuste `user` no `docker/docker-compose.yml` e o `usermod`/`groupmod` no `docker/Dockerfile`.
+> O container `app` roda com o UID e o GID `1000`, para que os arquivos que ele cria (como o `vendor/`) pertençam ao seu usuário. Se o seu usuário tiver outro UID ou GID (confira com `id -u` e `id -g`), defina `DOCKER_USER_UID` e `DOCKER_GROUP_GID` no `.env` e reconstrua a imagem com `docker compose up -d --build`. O container `node` usa o usuário `node` da imagem, que também tem UID `1000`.
 
 ### 💻 **Sem Docker**
 
